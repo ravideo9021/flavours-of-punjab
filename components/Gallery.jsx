@@ -3,14 +3,16 @@ import CoverflowCarousel from './CoverflowCarousel';
 
 const slides = [
   { src: '/media/Butter-Chicken.jpg', alt: 'Butter Chicken curry', title: 'Butter Chicken', subtitle: 'Signature' },
-  { src: '/media/paneer_tikka_bg.jpg', alt: 'Paneer Tikka skewers', title: 'Paneer Tikka', subtitle: 'Tandoor Grill' },
+  { src: '/media/paneer%20tikka.png', alt: 'Paneer Tikka grilled', title: 'Paneer Tikka', subtitle: 'Tandoor Grill' },
   { src: '/media/Dal%20Makhani.png', alt: 'Dal Makhani slow-cooked', title: 'Dal Makhni', subtitle: 'Slow-Cooked' },
-  { src: '/media/butter_chicken_bg.png', alt: 'Chicken curry with rice', title: 'Chicken Curry', subtitle: 'House Special' },
+  { src: '/media/tandoori_chicken.png', alt: 'Tandoori Chicken', title: 'Tandoori Chicken', subtitle: 'Clay Oven' },
   { src: '/media/veg_biryani_bg.jpg', alt: 'Veg Biryani in handi', title: 'Veg Biryani', subtitle: 'Dum Cooked' },
   { src: '/media/palak_paneer.jpg', alt: 'Palak Paneer', title: 'Palak Paneer', subtitle: 'Iron Rich' },
-  { src: '/media/b45da0506d942600.jpg', alt: 'Dal with steamed rice', title: 'Dal Rice', subtitle: 'Comfort Classic' },
+  { src: '/media/Malai_chaap.png', alt: 'Malai Chaap', title: 'Malai Chaap', subtitle: 'Creamy Delight' },
   { src: '/media/tandoori_paneer_platter.png', alt: 'Tandoori paneer platter', title: 'Tandoori Platter', subtitle: 'Chef Special' },
   { src: '/media/garlic_naan.png', alt: 'Fresh garlic naan basket', title: 'Garlic Naan', subtitle: 'Tandoor Fresh' },
+  { src: '/media/chiken_biryani_bowl.png', alt: 'Chicken Biryani bowl', title: 'Chicken Biryani', subtitle: 'Royal' },
+  { src: '/media/Chicken%20Seekh%20Chatpata%20.png', alt: 'Chicken Seekh Chatpata', title: 'Seekh Chatpata', subtitle: 'Grilled' },
   { src: '/media/juice.jpg', alt: 'Mango Lassi drink', title: 'Mango Lassi', subtitle: 'Refreshing' },
 ];
 

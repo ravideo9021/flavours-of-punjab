@@ -49,10 +49,12 @@ const FOOD_IMAGES = [
   '/media/Dal%20Makhani.png',
   '/media/palak_paneer.jpg',
   '/media/b45da0506d942600.jpg',
-  '/media/palak_paneer.jpg',
+  '/media/tandoori_chicken.png',
   '/media/veg_biryani_bg.jpg',
-  '/media/butter_chicken_bg.png',
-  '/media/paneer_tikka_bg.jpg',
+  '/media/Malai_chaap.png',
+  '/media/paneer%20tikka.png',
+  '/media/chiken_biryani_bowl.png',
+  '/media/garlic_naan.png',
 ];
 
 function buildImageData() {

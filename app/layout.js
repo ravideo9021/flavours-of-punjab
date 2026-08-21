@@ -1,16 +1,42 @@
+import { Barlow_Condensed, Mr_Dafoe } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollEffects from '@/components/ScrollEffects';
 
+const barlow = Barlow_Condensed({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  display: 'swap',
+  variable: '--font-display',
+});
+
+const dafoe = Mr_Dafoe({
+  subsets: ['latin'],
+  weight: '400',
+  display: 'swap',
+  variable: '--font-script',
+});
+
 export const metadata = {
-  title: 'Flavours Of Punjab | Authentic Punjabi Family Restaurant – Veg & Non-Veg',
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://flavours-of-punjab.vercel.app'),
+  title: {
+    default: 'Flavours Of Punjab | Authentic Punjabi Family Restaurant – Veg & Non-Veg',
+    template: '%s | Flavours Of Punjab',
+  },
   description:
-    'Experience authentic Punjabi cuisine at Flavours Of Punjab. From smoky tandoori delights and rich butter chicken to aromatic biryanis and traditional breads. Dine-in, takeaway & home delivery available.',
+    'Experience authentic Punjabi cuisine at Flavours Of Punjab, Old Rajinder Nagar, New Delhi. Smoky tandoori, rich butter chicken, aromatic biryanis & traditional breads. Dine-in, takeaway & home delivery.',
   keywords:
-    'Punjabi restaurant, Indian food, butter chicken, tandoori, biryani, dal makhni, paneer tikka, naan, Flavours Of Punjab, family restaurant, veg non-veg',
+    'Punjabi restaurant, Indian food, butter chicken, tandoori, biryani, dal makhni, paneer tikka, naan, Flavours Of Punjab, family restaurant, veg non-veg, Old Rajinder Nagar, New Delhi',
   authors: [{ name: 'Flavours Of Punjab' }],
-  robots: 'index, follow',
+  creator: 'Flavours Of Punjab',
+  publisher: 'Flavours Of Punjab',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
+  },
+  alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
     title: 'Flavours Of Punjab – Authentic Punjabi Family Restaurant',
@@ -18,7 +44,7 @@ export const metadata = {
       'Savour the finest Punjabi cuisine — tandoori, curries, biryani, breads and more. Dine-in, takeaway & home delivery.',
     siteName: 'Flavours Of Punjab',
     locale: 'en_IN',
-    images: [{ url: '/media/butter_chicken_bg.png', width: 1200, height: 630, alt: 'Flavours Of Punjab' }],
+    images: [{ url: '/media/butter_chicken_bg.png', width: 1200, height: 630, alt: 'Flavours Of Punjab — Authentic Punjabi Cuisine' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -32,11 +58,12 @@ export const metadata = {
   other: {
     'theme-color': '#0D0B09',
   },
+  category: 'restaurant',
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${barlow.variable} ${dafoe.variable}`}>
       <head>
         <script
           type="application/ld+json"

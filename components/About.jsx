@@ -31,8 +31,8 @@ export default function About() {
           <img
             className="about-img scroll-parallax"
             data-parallax="0.1"
-            src="/media/Dal%20Makhani.png"
-            alt="Dal Makhni — slow-cooked Punjabi lentils"
+            src="/media/garlic_naan.png"
+            alt="Fresh garlic naan from the tandoor"
             loading="lazy"
           />
           <img className="about-decor d1" src="/media/d04dbd8fbaefea2f.png" alt="" loading="lazy" aria-hidden="true" />

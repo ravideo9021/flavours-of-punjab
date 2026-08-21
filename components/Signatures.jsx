@@ -1,6 +1,6 @@
 const dishes = [
   {
-    img: '/media/dal_tadka.png',
+    img: '/media/Dal%20Makhani.png',
     alt: 'Dal Makhni — creamy black lentils',
     tag: 'Must Try',
     name: 'Dal Makhni',
@@ -8,8 +8,8 @@ const dishes = [
     price: '₹240',
   },
   {
-    img: '/media/veg_biryani.png',
-    alt: 'Aromatic Biryani with raita',
+    img: '/media/chiken_biryani_bowl.png',
+    alt: 'Chicken Biryani in a traditional bowl',
     tag: 'Popular',
     name: 'Chicken Biryani',
     desc: 'Aromatic basmati rice layered with tender chicken, rich spices and saffron.',

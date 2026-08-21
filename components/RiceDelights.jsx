@@ -2,15 +2,13 @@ export default function RiceDelights() {
   return (
     <section className="rice-section">
       <div className="rice-inner">
-        {/* Parallax food elements */}
         <div className="rice-bowl rice-bowl-left scroll-parallax-up" aria-hidden="true">
-          <img src="/media/veg_biryani.png" alt="" loading="lazy" />
+          <img src="/media/rice_bowl.png" alt="" loading="lazy" />
         </div>
         <div className="rice-bowl rice-bowl-right scroll-parallax-down" aria-hidden="true">
-          <img src="/media/veg_biryni.png" alt="" loading="lazy" />
+          <img src="/media/rice_image.png" alt="" loading="lazy" />
         </div>
 
-        {/* Floating decorative elements */}
         <div className="rice-deco rice-deco-1" aria-hidden="true">
           <img src="/media/d04dbd8fbaefea2f.png" alt="" loading="lazy" />
         </div>
@@ -18,7 +16,6 @@ export default function RiceDelights() {
           <img src="/media/tomato_for_decoration.png" alt="" loading="lazy" />
         </div>
 
-        {/* Decorative line-art illustrations */}
         <svg className="rice-art rice-art-1" viewBox="0 0 80 80" fill="none" stroke="rgba(255,255,255,.12)" strokeWidth="1" aria-hidden="true">
           <circle cx="40" cy="40" r="30" /><path d="M25 55c5-15 25-15 30 0" /><path d="M30 25c5 8 15 8 20 0" />
         </svg>
