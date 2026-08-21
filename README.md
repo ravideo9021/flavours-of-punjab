@@ -118,7 +118,7 @@ The project uses a custom CSS design system with CSS variables defined in `app/g
 ## Restaurant Info
 
 - **Name:** Flavours Of Punjab
-- **Location:** Shankar Main Road, Rajinder Nagar, New Delhi
+- **Location:** 3/16, Shankar Rd, Block 3, Old Rajinder Nagar, New Delhi, Delhi 110060
 - **Phone:** +91 99102 97708
 - **Hours:** Mon-Sun, 11:00 AM - 11:00 PM
 - **Order Online:** [Swiggy](https://www.swiggy.com/city/delhi/flavours-of-punjab-shankar-main-road-rajinder-nagar-rest9826) | [Zomato](https://zomato.onelink.me/xqzv/5ynak9ns)
