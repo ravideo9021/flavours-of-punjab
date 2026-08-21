@@ -51,6 +51,20 @@ export default function RootLayout({ children }) {
               telephone: '+919910297708',
               priceRange: '₹₹',
               acceptsReservations: true,
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: '3/16, Shankar Rd, Block 3, Old Rajinder Nagar',
+                addressLocality: 'New Delhi',
+                addressRegion: 'Delhi',
+                postalCode: '110060',
+                addressCountry: 'IN',
+              },
+              geo: {
+                '@type': 'GeoCoordinates',
+                latitude: 28.6366247,
+                longitude: 77.1838708,
+              },
+              url: 'https://www.google.com/maps/place/Flavours+Of+Punjab+Restaurant/@28.6366247,77.1812959,17z',
               hasMenu: {
                 '@type': 'Menu',
                 name: 'Main Menu',
