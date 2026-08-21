@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://flavoursofpunjab.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://flavours-of-punjab.vercel.app';
   return [
     {
       url: baseUrl,

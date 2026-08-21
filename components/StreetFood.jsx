@@ -1,18 +1,17 @@
 const items = [
-  { img: '/media/Butter-Chicken.jpg', name: 'Chicken Tikka', price: '₹320', desc: 'Smoky, charred and marinated to perfection.' },
-  { img: '/media/tandoori_paneer_platter.png', name: 'Seekh Kebab', price: '₹300', desc: 'Juicy minced meat on skewers, straight from the grill.' },
-  { img: '/media/675aefc93b9788df.png', name: 'Paneer Tikka', price: '₹280', desc: 'Cottage cheese cubes in rich tandoori marinade.' },
-  { img: '/media/408043caa38c7906.png', name: 'Fish Tikka', price: '₹350', desc: 'Tender fish fillets, spiced and clay-oven roasted.' },
+  { img: '/media/tandoori_chicken.png', name: 'Tandoori Chicken', price: '₹450', desc: 'Smoky, charred and marinated to perfection in the clay oven.' },
+  { img: '/media/Chicken%20Seekh%20Chatpata%20.png', name: 'Chicken Seekh Chatpata', price: '₹300', desc: 'Juicy spiced minced chicken on skewers, straight from the grill.' },
+  { img: '/media/paneer%20tikka.png', name: 'Paneer Tikka', price: '₹310', desc: 'Cottage cheese cubes in rich tandoori marinade, char-grilled.' },
+  { img: '/media/Malai_chaap.png', name: 'Malai Chaap', price: '₹280', desc: 'Creamy, melt-in-mouth soy chaap in a rich malai marinade.' },
 ];
 
 export default function StreetFood() {
   return (
     <>
-      {/* Second ticker strip — reversed direction */}
       <div className="ticker-strip ticker-reverse" aria-hidden="true">
         <div className="ticker-track">
-          <span>Tandoori &bull; Biryani &bull; Butter Chicken &bull; Dal Makhni &bull; Naan &bull; Seekh Kebab &bull; Paneer Tikka &bull; Rogan Josh &bull;&nbsp;</span>
-          <span>Tandoori &bull; Biryani &bull; Butter Chicken &bull; Dal Makhni &bull; Naan &bull; Seekh Kebab &bull; Paneer Tikka &bull; Rogan Josh &bull;&nbsp;</span>
+          <span>Tandoori &bull; Biryani &bull; Butter Chicken &bull; Dal Makhni &bull; Naan &bull; Malai Chaap &bull; Paneer Tikka &bull; Rogan Josh &bull;&nbsp;</span>
+          <span>Tandoori &bull; Biryani &bull; Butter Chicken &bull; Dal Makhni &bull; Naan &bull; Malai Chaap &bull; Paneer Tikka &bull; Rogan Josh &bull;&nbsp;</span>
         </div>
       </div>
 
