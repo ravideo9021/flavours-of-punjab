@@ -1,0 +1,850 @@
+{
+  "assets": [
+    {
+      "contentType": "image/png",
+      "id": "cf9a79c2aac2ce61",
+      "kind": "image",
+      "name": "PNG-C-1536x1018-1-170x113-1.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/cf9a79c2aac2ce61.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2023/10/PNG-C-1536x1018-1-170x113-1.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "869f26f53e888273",
+      "kind": "image",
+      "name": "cropped-PNG-C-1536x1018-1-170x113-1.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/869f26f53e888273.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2023/10/cropped-PNG-C-1536x1018-1-170x113-1.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "ef8f3bb1ba788bd4",
+      "kind": "image",
+      "name": "dummy.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/ef8f3bb1ba788bd4.png",
+      "url": "https://indianspice.ca/wp-content/plugins/revslider/sr6/assets/assets/dummy.png"
+    },
+    {
+      "contentType": "image/jpeg",
+      "id": "d0b532e9721a74c4",
+      "kind": "image",
+      "name": "IS_Footer.jpg",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/d0b532e9721a74c4.jpg",
+      "url": "https://indianspice.ca/wp-content/uploads/2023/10/IS_Footer.jpg"
+    },
+    {
+      "contentType": "image/png",
+      "id": "7d7f498519701262",
+      "kind": "image",
+      "name": "Takeway_popup_png.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/7d7f498519701262.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2024/04/Takeway_popup_png.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "48ffd5ef7f260425",
+      "kind": "image",
+      "name": "1b97d8f9-3a42-4c48-b744-4ed50044f0c7.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/48ffd5ef7f260425.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2026/04/1b97d8f9-3a42-4c48-b744-4ed50044f0c7.png"
+    },
+    {
+      "contentType": "image/jpeg",
+      "id": "75a1aae65468e682",
+      "kind": "image",
+      "name": "h6_bg-1.jpg",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/75a1aae65468e682.jpg",
+      "url": "https://indianspice.ca/wp-content/uploads/2023/10/h6_bg-1.jpg"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "fee3b95a8d482c1a",
+      "kind": "font",
+      "name": "barlowcondensed-htx3l3i-jcgchyj8vi-l6oo_au7b6xht2g.woff2",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/fee3b95a8d482c1a.woff2",
+      "url": "https://indianspice.ca/wp-content/uploads/elementor/google-fonts/fonts/barlowcondensed-htx3l3i-jcgchyj8vi-l6oo_au7b6xht2g.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "def20037c5b01c0f",
+      "kind": "font",
+      "name": "barlowcondensed-htxwl3i-jcgchyj8vi-l6oo_au7b4873z3bwuq.woff2",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/def20037c5b01c0f.woff2",
+      "url": "https://indianspice.ca/wp-content/uploads/elementor/google-fonts/fonts/barlowcondensed-htxwl3i-jcgchyj8vi-l6oo_au7b4873z3bwuq.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "b1dd9a7b22454863",
+      "kind": "font",
+      "name": "mrdafoe-ljwe-pizks5nxummrfitibi.woff2",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/b1dd9a7b22454863.woff2",
+      "url": "https://indianspice.ca/wp-content/uploads/elementor/google-fonts/fonts/mrdafoe-ljwe-pizks5nxummrfitibi.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "a0d5c2db7e5808c1",
+      "kind": "font",
+      "name": "fazfood-icon-1.0.4.woff2",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/a0d5c2db7e5808c1.woff2",
+      "url": "https://indianspice.ca/wp-content/themes/fazfood/assets/fonts/icons/fazfood-icon-1.0.4.woff2"
+    },
+    {
+      "contentType": "image/jpeg",
+      "id": "9bf386baff6edf81",
+      "kind": "image",
+      "name": "Pulao_Thumb_Main.jpg",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/9bf386baff6edf81.jpg",
+      "url": "https://indianspice.ca/wp-content/uploads/2024/04/Pulao_Thumb_Main.jpg"
+    },
+    {
+      "contentType": "image/png",
+      "id": "b8b6ed28acbeac4a",
+      "kind": "image",
+      "name": "h6_pattern.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/b8b6ed28acbeac4a.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2023/10/h6_pattern.png"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "2e319f2bcdb4e412",
+      "kind": "font",
+      "name": "barlowcondensed-htxwl3i-jcgchyj8vi-l6oo_au7b46r2z3bwuq.woff2",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/2e319f2bcdb4e412.woff2",
+      "url": "https://indianspice.ca/wp-content/uploads/elementor/google-fonts/fonts/barlowcondensed-htxwl3i-jcgchyj8vi-l6oo_au7b46r2z3bwuq.woff2"
+    },
+    {
+      "contentType": "application/font-woff",
+      "id": "928f8041d92b0612",
+      "kind": "font",
+      "name": "wp-social-reviews.woff",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/928f8041d92b0612.woff",
+      "url": "https://indianspice.ca/wp-content/plugins/wp-social-reviews/assets/fonts/wp-social-reviews.woff?fd48dc29ab485fcfe5ca85901224a277"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "72f2680bd48a6b1f",
+      "kind": "font",
+      "name": "norican-mwq2bhxp1esbqjkpkjvbtq.woff2",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/72f2680bd48a6b1f.woff2",
+      "url": "https://indianspice.ca/wp-content/uploads/elementor/google-fonts/fonts/norican-mwq2bhxp1esbqjkpkjvbtq.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "4d45bf41dae1ae1f",
+      "kind": "font",
+      "name": "barlowcondensed-htxwl3i-jcgchyj8vi-l6oo_au7b47b1z3bwuq.woff2",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/4d45bf41dae1ae1f.woff2",
+      "url": "https://indianspice.ca/wp-content/uploads/elementor/google-fonts/fonts/barlowcondensed-htxwl3i-jcgchyj8vi-l6oo_au7b47b1z3bwuq.woff2"
+    },
+    {
+      "contentType": "image/png",
+      "id": "d72d91e03d657276",
+      "kind": "image",
+      "name": "h6_decor-2.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/d72d91e03d657276.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2023/10/h6_decor-2.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "4766840064ac968e",
+      "kind": "image",
+      "name": "h6_decor-3.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/4766840064ac968e.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2023/10/h6_decor-3.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "afb85c5e2bcbf55f",
+      "kind": "image",
+      "name": "panner-tikka-new.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/afb85c5e2bcbf55f.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2026/05/panner-tikka-new.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "d04dbd8fbaefea2f",
+      "kind": "image",
+      "name": "h6_decor-1.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/d04dbd8fbaefea2f.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2023/10/h6_decor-1.png"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "b1384441c767f281",
+      "kind": "font",
+      "name": "barlowcondensed-htxwl3i-jcgchyj8vi-l6oo_au7b4-lwz3bwuq.woff2",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/b1384441c767f281.woff2",
+      "url": "https://indianspice.ca/wp-content/uploads/elementor/google-fonts/fonts/barlowcondensed-htxwl3i-jcgchyj8vi-l6oo_au7b4-lwz3bwuq.woff2"
+    },
+    {
+      "contentType": "image/png",
+      "id": "4b68146bd6c951cb",
+      "kind": "image",
+      "name": "h6_decor-6.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/4b68146bd6c951cb.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2023/11/h6_decor-6.png"
+    },
+    {
+      "contentType": "image/jpeg",
+      "id": "3bb0b836dfd72a2b",
+      "kind": "image",
+      "name": "Street_Food_Thumb.jpg",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/3bb0b836dfd72a2b.jpg",
+      "url": "https://indianspice.ca/wp-content/uploads/2024/04/Street_Food_Thumb.jpg"
+    },
+    {
+      "contentType": "image/jpeg",
+      "id": "a09b65a247ed8f9e",
+      "kind": "image",
+      "name": "Gallery4.jpg",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/a09b65a247ed8f9e.jpg",
+      "url": "https://indianspice.ca/wp-content/uploads/2024/04/Gallery4.jpg"
+    },
+    {
+      "contentType": "image/jpeg",
+      "id": "039f27330c860275",
+      "kind": "image",
+      "name": "Gallery7.jpg",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/039f27330c860275.jpg",
+      "url": "https://indianspice.ca/wp-content/uploads/2024/04/Gallery7.jpg"
+    },
+    {
+      "contentType": "image/png",
+      "id": "fd270216863a5c6d",
+      "kind": "image",
+      "name": "uttapam-new.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/fd270216863a5c6d.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2026/05/uttapam-new.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "3db1a685acff7206",
+      "kind": "image",
+      "name": "ft_vector2.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/3db1a685acff7206.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2023/10/ft_vector2.png"
+    },
+    {
+      "contentType": "image/jpeg",
+      "id": "a669e69dc609e084",
+      "kind": "image",
+      "name": "Gallery1_New.jpg",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/a669e69dc609e084.jpg",
+      "url": "https://indianspice.ca/wp-content/uploads/2024/04/Gallery1_New.jpg"
+    },
+    {
+      "contentType": "image/jpeg",
+      "id": "3d57ed974be72dd0",
+      "kind": "image",
+      "name": "Gallery2.jpg",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/3d57ed974be72dd0.jpg",
+      "url": "https://indianspice.ca/wp-content/uploads/2024/04/Gallery2.jpg"
+    },
+    {
+      "contentType": "image/jpeg",
+      "id": "4c530780c0b45c64",
+      "kind": "image",
+      "name": "dahi-vadai.jpg",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/4c530780c0b45c64.jpg",
+      "url": "https://indianspice.ca/wp-content/uploads/2026/05/dahi-vadai.jpg"
+    },
+    {
+      "contentType": "image/png",
+      "id": "ccc0115ac7e4435f",
+      "kind": "image",
+      "name": "authentic-veg-biryani.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/ccc0115ac7e4435f.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2026/05/authentic-veg-biryani.png"
+    },
+    {
+      "contentType": "image/jpeg",
+      "id": "570c8ef77fa9d753",
+      "kind": "image",
+      "name": "Gallery5.jpg",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/570c8ef77fa9d753.jpg",
+      "url": "https://indianspice.ca/wp-content/uploads/2024/04/Gallery5.jpg"
+    },
+    {
+      "contentType": "image/jpeg",
+      "id": "1ff9c1e7c62c1a8a",
+      "kind": "image",
+      "name": "Gallery3.jpg",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/1ff9c1e7c62c1a8a.jpg",
+      "url": "https://indianspice.ca/wp-content/uploads/2024/04/Gallery3.jpg"
+    },
+    {
+      "contentType": "image/png",
+      "id": "d7abed870cc3edc0",
+      "kind": "image",
+      "name": "rice-new-e1778618588577.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/d7abed870cc3edc0.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2026/05/rice-new-e1778618588577.png"
+    },
+    {
+      "contentType": "image/jpeg",
+      "id": "8ce1042b8e5fa587",
+      "kind": "image",
+      "name": "CR_Vadapav_Is.jpg",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/8ce1042b8e5fa587.jpg",
+      "url": "https://indianspice.ca/wp-content/uploads/2024/04/CR_Vadapav_Is.jpg"
+    },
+    {
+      "contentType": "image/png",
+      "id": "ed223ad0c274c020",
+      "kind": "image",
+      "name": "h6_decor-4.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/ed223ad0c274c020.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2023/10/h6_decor-4.png"
+    },
+    {
+      "contentType": "image/jpeg",
+      "id": "4659733c4805792e",
+      "kind": "image",
+      "name": "CR_Dosa_IS.jpg",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/4659733c4805792e.jpg",
+      "url": "https://indianspice.ca/wp-content/uploads/2024/04/CR_Dosa_IS.jpg"
+    },
+    {
+      "contentType": "image/png",
+      "id": "eb17be7cb2d0dea7",
+      "kind": "image",
+      "name": "h6_decor-5.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/eb17be7cb2d0dea7.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2023/10/h6_decor-5.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "c2c136120b951aa2",
+      "kind": "image",
+      "name": "vadapav_thumb_footer-1.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/c2c136120b951aa2.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2024/04/vadapav_thumb_footer-1.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "d13d83f2c727b8de",
+      "kind": "image",
+      "name": "masala_idly_footer_thumb_main.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/d13d83f2c727b8de.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2024/04/masala_idly_footer_thumb_main.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "07ce86cd41e885cc",
+      "kind": "image",
+      "name": "ft_vector3.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/07ce86cd41e885cc.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2023/10/ft_vector3.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "56ecd89856a34e88",
+      "kind": "image",
+      "name": "dal-makhni-new.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/56ecd89856a34e88.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2026/05/dal-makhni-new.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "408043caa38c7906",
+      "kind": "image",
+      "name": "uttapam-new-50x50.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/408043caa38c7906.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2026/05/uttapam-new-50x50.png"
+    },
+    {
+      "contentType": "image/jpeg",
+      "id": "1dc2ae5e7f9273c5",
+      "kind": "image",
+      "name": "Gallery1_New-300x150.jpg",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/1dc2ae5e7f9273c5.jpg",
+      "url": "https://indianspice.ca/wp-content/uploads/2024/04/Gallery1_New-300x150.jpg"
+    },
+    {
+      "contentType": "image/jpeg",
+      "id": "427ac34ff84a12e8",
+      "kind": "image",
+      "name": "Gallery2-300x274.jpg",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/427ac34ff84a12e8.jpg",
+      "url": "https://indianspice.ca/wp-content/uploads/2024/04/Gallery2-300x274.jpg"
+    },
+    {
+      "contentType": "image/jpeg",
+      "id": "0c620932eccf2a9e",
+      "kind": "image",
+      "name": "Gallery4-300x148.jpg",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/0c620932eccf2a9e.jpg",
+      "url": "https://indianspice.ca/wp-content/uploads/2024/04/Gallery4-300x148.jpg"
+    },
+    {
+      "contentType": "image/jpeg",
+      "id": "9716623d17785c57",
+      "kind": "image",
+      "name": "Street_Food_Thumb-300x203.jpg",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/9716623d17785c57.jpg",
+      "url": "https://indianspice.ca/wp-content/uploads/2024/04/Street_Food_Thumb-300x203.jpg"
+    },
+    {
+      "contentType": "image/png",
+      "id": "98f0f11fc9a3c39f",
+      "kind": "image",
+      "name": "panner-tikka-new-300x245.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/98f0f11fc9a3c39f.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2026/05/panner-tikka-new-300x245.png"
+    },
+    {
+      "contentType": "image/jpeg",
+      "id": "656aebf34da89968",
+      "kind": "image",
+      "name": "dahi-vadai-300x162.jpg",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/656aebf34da89968.jpg",
+      "url": "https://indianspice.ca/wp-content/uploads/2026/05/dahi-vadai-300x162.jpg"
+    },
+    {
+      "contentType": "image/jpeg",
+      "id": "047f97981c4776f9",
+      "kind": "image",
+      "name": "Gallery3-50x50.jpg",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/047f97981c4776f9.jpg",
+      "url": "https://indianspice.ca/wp-content/uploads/2024/04/Gallery3-50x50.jpg"
+    },
+    {
+      "contentType": "image/jpeg",
+      "id": "b45da0506d942600",
+      "kind": "image",
+      "name": "Gallery5-300x187.jpg",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/b45da0506d942600.jpg",
+      "url": "https://indianspice.ca/wp-content/uploads/2024/04/Gallery5-300x187.jpg"
+    },
+    {
+      "contentType": "image/png",
+      "id": "a3e7d7c217913c8f",
+      "kind": "image",
+      "name": "h6_decor-4-169x300.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/a3e7d7c217913c8f.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2023/10/h6_decor-4-169x300.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "5207ab64038fe842",
+      "kind": "image",
+      "name": "rice-new-e1778618588577-300x261.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/5207ab64038fe842.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2026/05/rice-new-e1778618588577-300x261.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "160b6487790dec12",
+      "kind": "image",
+      "name": "authentic-veg-biryani-300x277.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/160b6487790dec12.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2026/05/authentic-veg-biryani-300x277.png"
+    },
+    {
+      "contentType": "image/jpeg",
+      "id": "aed5c73307ed0c79",
+      "kind": "image",
+      "name": "CR_Vadapav_Is-252x300.jpg",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/aed5c73307ed0c79.jpg",
+      "url": "https://indianspice.ca/wp-content/uploads/2024/04/CR_Vadapav_Is-252x300.jpg"
+    },
+    {
+      "contentType": "image/jpeg",
+      "id": "042a127154d8fadf",
+      "kind": "image",
+      "name": "CR_Dosa_IS-251x300.jpg",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/042a127154d8fadf.jpg",
+      "url": "https://indianspice.ca/wp-content/uploads/2024/04/CR_Dosa_IS-251x300.jpg"
+    },
+    {
+      "contentType": "image/png",
+      "id": "e8be2a586b9c2643",
+      "kind": "image",
+      "name": "dal-makhni-new-251x300.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/e8be2a586b9c2643.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2026/05/dal-makhni-new-251x300.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "6d5656d83f1fcc20",
+      "kind": "image",
+      "name": "Takeway_popup_png-300x191.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/6d5656d83f1fcc20.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2024/04/Takeway_popup_png-300x191.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "8e172336ebdcfc73",
+      "kind": "image",
+      "name": "vadapav_thumb_footer-1-300x286.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/8e172336ebdcfc73.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2024/04/vadapav_thumb_footer-1-300x286.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "bcbdab7204be250c",
+      "kind": "image",
+      "name": "masala_idly_footer_thumb_main-50x50.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/bcbdab7204be250c.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2024/04/masala_idly_footer_thumb_main-50x50.png"
+    },
+    {
+      "contentType": "image/jpeg",
+      "id": "dcc7becd135136b7",
+      "kind": "image",
+      "name": "IS_Footer-300x256.jpg",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/dcc7becd135136b7.jpg",
+      "url": "https://indianspice.ca/wp-content/uploads/2023/10/IS_Footer-300x256.jpg"
+    },
+    {
+      "contentType": "image/png",
+      "id": "2bb1fb63af1b1403",
+      "kind": "image",
+      "name": "1b97d8f9-3a42-4c48-b744-4ed50044f0c7-50x50.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/2bb1fb63af1b1403.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2026/04/1b97d8f9-3a42-4c48-b744-4ed50044f0c7-50x50.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "5dd205ac79872bc2",
+      "kind": "image",
+      "name": "revslider_h2-leaf.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/5dd205ac79872bc2.png",
+      "url": "https://indianspice.ca/wp-content/uploads/revslider/slider-home6/revslider_h2-leaf.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "a9960ecd0670a1a6",
+      "kind": "image",
+      "name": "revslider_h2-mushroom.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/a9960ecd0670a1a6.png",
+      "url": "https://indianspice.ca/wp-content/uploads/revslider/slider-home6/revslider_h2-mushroom.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "d31cd3538d0a9765",
+      "kind": "image",
+      "name": "Mendhuvadai_png-1.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/d31cd3538d0a9765.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2024/04/Mendhuvadai_png-1.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "5c031a2f99b28eb1",
+      "kind": "image",
+      "name": "revslider_h2-tomato.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/5c031a2f99b28eb1.png",
+      "url": "https://indianspice.ca/wp-content/uploads/revslider/slider-home6/revslider_h2-tomato.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "724a9845945afdb7",
+      "kind": "image",
+      "name": "transparent.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/724a9845945afdb7.png",
+      "url": "https://indianspice.ca/wp-content/plugins/revslider/sr6/assets/assets/transparent.png"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "8a7649b66a07bce8",
+      "kind": "image",
+      "name": "circle.svg",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/8a7649b66a07bce8.svg",
+      "url": "https://indianspice.ca/wp-content/plugins/elementor/assets/svg-paths/circle.svg"
+    },
+    {
+      "contentType": "image/png",
+      "id": "083bbd2ed65ab6bc",
+      "kind": "image",
+      "name": "cropped-FAVICON-32x32.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/083bbd2ed65ab6bc.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2024/05/cropped-FAVICON-32x32.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "675aefc93b9788df",
+      "kind": "image",
+      "name": "rev_home3_2.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/675aefc93b9788df.png",
+      "url": "https://indianspice.ca/wp-content/uploads/revslider/slider-home6/rev_home3_2.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "5790a40ce6e3a1b3",
+      "kind": "image",
+      "name": "rev_home3_4.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/5790a40ce6e3a1b3.png",
+      "url": "https://indianspice.ca/wp-content/uploads/revslider/slider-home6/rev_home3_4.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "1ec3163d3fd2b4f0",
+      "kind": "image",
+      "name": "dal_makhni_ele.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/1ec3163d3fd2b4f0.png",
+      "url": "https://indianspice.ca/wp-content/uploads/2024/04/dal_makhni_ele.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "b9812005399744a9",
+      "kind": "image",
+      "name": "rev_home3_5.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/b9812005399744a9.png",
+      "url": "https://indianspice.ca/wp-content/uploads/revslider/slider-home6/rev_home3_5.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "8b74972aefee1295",
+      "kind": "image",
+      "name": "rev_home4_3.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/8b74972aefee1295.png",
+      "url": "https://indianspice.ca/wp-content/uploads/revslider/slider-home6/rev_home4_3.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "f9972abd68cb8c22",
+      "kind": "image",
+      "name": "rev_home4_2.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/f9972abd68cb8c22.png",
+      "url": "https://indianspice.ca/wp-content/uploads/revslider/slider-home6/rev_home4_2.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "52c2f5c77d92c3d6",
+      "kind": "image",
+      "name": "rev_home4_1.png",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/52c2f5c77d92c3d6.png",
+      "url": "https://indianspice.ca/wp-content/uploads/revslider/slider-home6/rev_home4_1.png"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "4402437f2e0bcc55",
+      "kind": "image",
+      "name": "svg-1",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/4402437f2e0bcc55.svg",
+      "url": "inline-svg:4402437f2e0bcc55"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "54601255021830ee",
+      "kind": "image",
+      "name": "svg-2",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/54601255021830ee.svg",
+      "url": "inline-svg:54601255021830ee"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "33c8cc9b8244b38d",
+      "kind": "image",
+      "name": "svg-3",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/33c8cc9b8244b38d.svg",
+      "url": "inline-svg:33c8cc9b8244b38d"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "84a9e19ae1149b0e",
+      "kind": "image",
+      "name": "svg-4",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/84a9e19ae1149b0e.svg",
+      "url": "inline-svg:84a9e19ae1149b0e"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "5b50b90a8c4f321f",
+      "kind": "image",
+      "name": "svg-5",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/5b50b90a8c4f321f.svg",
+      "url": "inline-svg:5b50b90a8c4f321f"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "ab95ea84b711bf63",
+      "kind": "image",
+      "name": "svg-6",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/ab95ea84b711bf63.svg",
+      "url": "inline-svg:ab95ea84b711bf63"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "ce4490769df0b59b",
+      "kind": "image",
+      "name": "svg-7",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/ce4490769df0b59b.svg",
+      "url": "inline-svg:ce4490769df0b59b"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "a9eb0096bc55f36b",
+      "kind": "image",
+      "name": "svg-8",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/a9eb0096bc55f36b.svg",
+      "url": "inline-svg:a9eb0096bc55f36b"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "206e094bd6f3902d",
+      "kind": "image",
+      "name": "svg-9",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/206e094bd6f3902d.svg",
+      "url": "inline-svg:206e094bd6f3902d"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "81a510918da14cf4",
+      "kind": "image",
+      "name": "svg-10",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/81a510918da14cf4.svg",
+      "url": "inline-svg:81a510918da14cf4"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "7ebd005a19506f5f",
+      "kind": "image",
+      "name": "svg-11",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/7ebd005a19506f5f.svg",
+      "url": "inline-svg:7ebd005a19506f5f"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "b49ff427ebf6033b",
+      "kind": "image",
+      "name": "svg-12",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/b49ff427ebf6033b.svg",
+      "url": "inline-svg:b49ff427ebf6033b"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "cf16d2cc298320b8",
+      "kind": "image",
+      "name": "svg-13",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/cf16d2cc298320b8.svg",
+      "url": "inline-svg:cf16d2cc298320b8"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "bea044e5c3eaca49",
+      "kind": "image",
+      "name": "svg-14",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/bea044e5c3eaca49.svg",
+      "url": "inline-svg:bea044e5c3eaca49"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "d3ae2d8a0c9681f0",
+      "kind": "image",
+      "name": "svg-15",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/d3ae2d8a0c9681f0.svg",
+      "url": "inline-svg:d3ae2d8a0c9681f0"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "e258bf1a3097dfba",
+      "kind": "image",
+      "name": "svg-16",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/e258bf1a3097dfba.svg",
+      "url": "inline-svg:e258bf1a3097dfba"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "45b3d413a4f82e58",
+      "kind": "image",
+      "name": "svg-17",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/45b3d413a4f82e58.svg",
+      "url": "inline-svg:45b3d413a4f82e58"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "92e6e7773a584936",
+      "kind": "image",
+      "name": "svg-18",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/92e6e7773a584936.svg",
+      "url": "inline-svg:92e6e7773a584936"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "be0ac43a54480b2f",
+      "kind": "image",
+      "name": "svg-19",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/be0ac43a54480b2f.svg",
+      "url": "inline-svg:be0ac43a54480b2f"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "4d97bb7c37e95203",
+      "kind": "image",
+      "name": "svg-20",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/4d97bb7c37e95203.svg",
+      "url": "inline-svg:4d97bb7c37e95203"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "fd7486d498e7c70d",
+      "kind": "image",
+      "name": "svg-21",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/fd7486d498e7c70d.svg",
+      "url": "inline-svg:fd7486d498e7c70d"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "16a1f555b876d921",
+      "kind": "image",
+      "name": "svg-22",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/16a1f555b876d921.svg",
+      "url": "inline-svg:16a1f555b876d921"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "9fea766aa8d5b222",
+      "kind": "image",
+      "name": "svg-23",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/9fea766aa8d5b222.svg",
+      "url": "inline-svg:9fea766aa8d5b222"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "a91478ab1fe38580",
+      "kind": "image",
+      "name": "svg-24",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/a91478ab1fe38580.svg",
+      "url": "inline-svg:a91478ab1fe38580"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "26044d9ae397eef2",
+      "kind": "image",
+      "name": "svg-25",
+      "path": "/var/folders/23/z7mrq_wj4qb12k50vxx94jhc0000gn/T/browser-use/assets/536433d0-0093-46b4-8b0b-60f77b6b6509/26044d9ae397eef2.svg",
+      "url": "inline-svg:26044d9ae397eef2"
+    }
+  ],
+  "failures": [
+    {
+      "contentType": "text/plain",
+      "id": "80295988704b0ce2",
+      "name": "tr",
+      "reason": "Asset response type text/plain is not valid for image",
+      "url": "https://www.facebook.com/tr/?id=970482948717464&ev=PageView&dl=https%3A%2F%2Findianspice.ca%2F&rl=&if=false&ts=1787246492112&iw=false&sw=1440&sh=900&v=2.9.380&r=stable&ec=0&o=4126&aems=0%3B0&fbp=fb.1.1787246492107.413204779977513052&ler=empty&cdl=API_unavailable&pmd[title]=Indian%20Spice%20%E2%80%93%20Best%20Indian%20Cuisine%20in%20Ontario&pmd[locale]=en-US&iss=1&imft=1&tz=330&it=1787246491755&coo=false&expv2[0]=pl1&expv2[1]=el2&expv2[2]=bc1&expv2[3]=ra2&expv2[4]=rp2&expv2[5]=im0&expv2[6]=hf1&expv2[7]=sd1&expv2[8]=sp1&expv2[9]=ek1&expv2[10]=pc1&expv2[11]=gs1&expv2[12]=zs1&expv2[13]=cp1&expv2[14]=es1&expv2[15]=ac1&expv2[16]=so1&expv2[17]=wc1&expv2[18]=la1&expv2[19]=sf1&expv2[20]=da1&expv2[21]=io1&expv2[22]=ae1&expv2[23]=sx1&expv2[24]=if1&expv2[25]=fd1&expv2[26]=bg1&expv2[27]=mg1&expv2[28]=kl1&expv2[29]=sg1&expv2[30]=mk1&expv2[31]=sn1&expv2[32]=ec1&expv2[33]=mp1&expv2[34]=ps1&expv2[35]=fx1&expv2[36]=vt1&rqm=GET"
+    },
+    {
+      "contentType": null,
+      "id": "9abdda039568587a",
+      "name": "h5_img3.png",
+      "reason": "Loaded resource fetch failed: Asset bundling failed; page fetch failed: Browser Use encountered an error interacting with this webpage: TypeError: Failed to fetch\n    at A$ (<anonymous>:1:41)\n    at <anonymous>:1:354",
+      "url": "https://demo2wpopal.b-cdn.net/fazfood/wp-content/uploads/2023/10/h5_img3.png"
+    },
+    {
+      "contentType": null,
+      "id": "2d4b57ae3b6d3ff1",
+      "name": "h4_decor-1.png",
+      "reason": "Loaded resource fetch failed: Asset bundling failed; page fetch failed: Browser Use encountered an error interacting with this webpage: TypeError: Failed to fetch\n    at A$ (<anonymous>:1:41)\n    at <anonymous>:1:354",
+      "url": "https://demo2wpopal.b-cdn.net/fazfood/wp-content/uploads/2023/10/h4_decor-1.png"
+    },
+    {
+      "contentType": null,
+      "id": "9f2cca1ef3680d6f",
+      "name": "h3_vector1.png",
+      "reason": "Loaded resource fetch failed: Asset bundling failed; page fetch failed: Browser Use encountered an error interacting with this webpage: TypeError: Failed to fetch\n    at A$ (<anonymous>:1:41)\n    at <anonymous>:1:354",
+      "url": "https://demo2wpopal.b-cdn.net/fazfood/wp-content/uploads/2023/10/h3_vector1.png"
+    }
+  ]
+}
