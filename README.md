@@ -75,7 +75,7 @@ flavours-of-punjab/
 ### Installation
 
 ```bash
-git clone https://github.com/ravidev9021/flavours-of-punjab.git
+git clone https://github.com/ravideo9021/flavours-of-punjab.git
 cd flavours-of-punjab
 npm install
 ```
