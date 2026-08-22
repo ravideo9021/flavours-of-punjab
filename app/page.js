@@ -7,6 +7,7 @@ import RiceDelights from '@/components/RiceDelights';
 import FoodShowcase from '@/components/FoodShowcase';
 import Menu from '@/components/Menu';
 import PlattersBanner from '@/components/PlattersBanner';
+import PartyServices from '@/components/PartyServices';
 import Gallery from '@/components/Gallery';
 import GlassHero from '@/components/GlassHero';
 import ReviewSphere from '@/components/ReviewSphere';
@@ -25,6 +26,7 @@ export default function Home() {
       <FoodShowcase />
       <PlattersBanner />
       <Menu />
+      <PartyServices />
       <Gallery />
       <GlassHero />
       <ReviewSphere />
