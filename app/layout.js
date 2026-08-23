@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollEffects from '@/components/ScrollEffects';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
+import AnimatedGradient from '@/components/AnimatedGradient';
 
 const barlow = Barlow_Condensed({
   subsets: ['latin'],
@@ -135,6 +136,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <AnimatedGradient />
         <Header />
         <main>{children}</main>
         <Footer />
