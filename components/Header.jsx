@@ -1,85 +1,142 @@
 'use client';
-import { useState, useEffect, useCallback } from 'react';
-import { Phone, ArrowRight } from 'lucide-react';
+import { useEffect, useId, useState } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { Menu as MenuIcon, Phone, X } from 'lucide-react';
+import Logo from './Logo';
+import { SwiggyIcon, ZomatoIcon, WhatsAppIcon } from './BrandIcons';
+import { site, whatsappLink } from '@/data/site';
+import { hoursSummary } from '@/lib/hours';
 
-const NAV_LINKS = [
-  { href: '#top', label: 'Home' },
-  { href: '#about', label: 'About' },
-  { href: '#menu', label: 'Menu' },
-  { href: '#gallery', label: 'Gallery' },
-  { href: '#contact', label: 'Contact' },
+const NAV = [
+  { href: '/#about', id: 'about', label: 'About' },
+  { href: '/menu', id: 'menu', label: 'Menu' },
+  { href: '/#events', id: 'events', label: 'Events' },
+  { href: '/#reviews', id: 'reviews', label: 'Reviews' },
+  { href: '/#visit', id: 'visit', label: 'Visit' },
 ];
 
 export default function Header() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('#top');
+  const [open, setOpen] = useState(false);
+  const [sectionInView, setSectionInView] = useState(null);
+  const navId = useId();
 
   useEffect(() => {
+    let ticking = false;
+    const update = () => {
+      setScrolled(window.scrollY > 24);
+      ticking = false;
+    };
     const onScroll = () => {
-      setScrolled(window.scrollY > 50);
-
-      const sections = document.querySelectorAll('section[id]');
-      const scrollPos = window.scrollY + 150;
-      for (const section of sections) {
-        if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
-          setActiveSection(`#${section.id}`);
-          break;
-        }
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
       }
     };
+    update();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const handleNavClick = useCallback((e, href) => {
-    e.preventDefault();
-    setMenuOpen(false);
-    const el = document.querySelector(href);
-    if (el) {
-      const offset = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h')) || 80;
-      window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
-    }
-  }, []);
+  // Highlight the section currently in the middle of the screen (home page).
+  useEffect(() => {
+    if (pathname !== '/') return;
+    const sections = NAV.map((n) => document.getElementById(n.id)).filter(Boolean);
+    const visible = new Set();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) visible.add(entry.target.id);
+          else visible.delete(entry.target.id);
+        }
+        setSectionInView(NAV.find((n) => visible.has(n.id))?.id ?? null);
+      },
+      { rootMargin: '-45% 0px -50% 0px' },
+    );
+    sections.forEach((s) => observer.observe(s));
+    return () => observer.disconnect();
+  }, [pathname]);
+
+  // Mobile drawer: lock page scroll and close on Escape.
+  useEffect(() => {
+    if (!open) return;
+    document.documentElement.classList.add('nav-open');
+    const onKey = (e) => e.key === 'Escape' && setOpen(false);
+    window.addEventListener('keydown', onKey);
+    return () => {
+      document.documentElement.classList.remove('nav-open');
+      window.removeEventListener('keydown', onKey);
+    };
+  }, [open]);
+
+  const close = () => setOpen(false);
+  const active = pathname === '/' ? sectionInView : pathname.startsWith('/menu') ? 'menu' : null;
 
   return (
-    <header className={`site-header ${scrolled ? 'scrolled' : ''}`} id="top">
-      <button
-        className={`mobile-toggle ${menuOpen ? 'active' : ''}`}
-        aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-        onClick={() => setMenuOpen(v => !v)}
-      >
-        <span /><span /><span />
-      </button>
+    <header className={`site-header${scrolled || open ? ' is-solid' : ''}`}>
+      <div className="header-inner">
+        <Logo onClick={close} />
 
-      <a className="logo" href="#top" aria-label="Flavours Of Punjab — home" onClick={e => handleNavClick(e, '#top')}>
-        <span className="logo-main">Flavours<span className="logo-of"> Of </span>Punjab</span>
-      </a>
+        <nav id={navId} className={`site-nav${open ? ' is-open' : ''}`} aria-label="Main">
+          <ul className="nav-links">
+            {NAV.map((item) => (
+              <li key={item.id}>
+                <Link
+                  href={item.href}
+                  className={active === item.id ? 'is-active' : undefined}
+                  aria-current={active === item.id && pathname !== '/' ? 'page' : undefined}
+                  onClick={close}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
 
-      <nav className={`nav ${menuOpen ? 'open' : ''}`} aria-label="Primary navigation">
-        {NAV_LINKS.map(link => (
-          <a
-            key={link.href}
-            href={link.href}
-            className={activeSection === link.href ? 'active' : ''}
-            onClick={e => handleNavClick(e, link.href)}
-          >
-            {link.label}
+          <div className="nav-drawer-extras">
+            <p className="nav-drawer-label">Order online</p>
+            <div className="nav-drawer-order">
+              <a className="brand-btn brand-btn--swiggy" href={site.order.swiggy} target="_blank" rel="noopener noreferrer">
+                <SwiggyIcon size={18} /> Swiggy
+              </a>
+              <a className="brand-btn brand-btn--zomato" href={site.order.zomato} target="_blank" rel="noopener noreferrer">
+                <ZomatoIcon size={30} /> Zomato
+              </a>
+            </div>
+            <div className="nav-drawer-contact">
+              <a href={site.phone.href}>
+                <Phone size={18} aria-hidden="true" /> {site.phone.display}
+              </a>
+              <a href={whatsappLink('Hi! I would like to book a table at Flavours Of Punjab.')} target="_blank" rel="noopener noreferrer">
+                <WhatsAppIcon size={18} /> WhatsApp us
+              </a>
+            </div>
+            <p className="nav-drawer-hours">{hoursSummary()}</p>
+          </div>
+        </nav>
+
+        <div className="header-actions">
+          <a className="header-call" href={site.phone.href} aria-label={`Call ${site.phone.display}`}>
+            <Phone size={17} aria-hidden="true" />
+            <span>{site.phone.display}</span>
           </a>
-        ))}
-      </nav>
-
-      <a className="header-cta" href="tel:+919910297708">
-        <span className="cta-label">
-          <Phone size={16} />
-          <span>Call Now</span>
-        </span>
-        <div className="cta-hover">
-          <span>Call Now</span>
-          <ArrowRight size={16} />
+          <Link className="btn btn-red header-order" href="/#order">
+            Order Online
+          </Link>
+          <button
+            type="button"
+            className="nav-toggle"
+            aria-expanded={open}
+            aria-controls={navId}
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <X size={26} aria-hidden="true" /> : <MenuIcon size={26} aria-hidden="true" />}
+          </button>
         </div>
-        <div className="cta-dot" />
-      </a>
+      </div>
     </header>
   );
 }

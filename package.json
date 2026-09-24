@@ -1,18 +1,24 @@
 {
   "name": "flavours-of-punjab",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev --port 4173",
     "build": "next build",
     "start": "next start --port 3000",
-    "lint": "next lint"
+    "lint": "eslint .",
+    "images": "node scripts/optimize-images.mjs",
+    "brand-assets": "node scripts/make-brand-assets.mjs"
   },
   "dependencies": {
-    "framer-motion": "^13.1.1",
-    "lucide-react": "^1.33.0",
-    "next": "^15.0.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "lucide-react": "^1.48.0",
+    "next": "^16.3.6",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.3.6",
+    "sharp": "^0.35.4"
   }
 }

@@ -1,51 +1,43 @@
-const dishes = [
-  {
-    img: '/media/Dal%20Makhani.png',
-    alt: 'Dal Makhni — creamy black lentils',
-    tag: 'Must Try',
-    name: 'Dal Makhni',
-    desc: 'Slow-cooked black lentils in a rich, creamy, buttery gravy — the soul of Punjabi cuisine.',
-    price: '₹240',
-  },
-  {
-    img: '/media/chiken_biryani_bowl.png',
-    alt: 'Chicken Biryani in a traditional bowl',
-    tag: 'Popular',
-    name: 'Chicken Biryani',
-    desc: 'Aromatic basmati rice layered with tender chicken, rich spices and saffron.',
-    price: '₹370',
-  },
-  {
-    img: '/media/Butter-Chicken.jpg',
-    alt: 'Butter Chicken in rich tomato gravy',
-    tag: 'Classic',
-    name: 'Butter Chicken',
-    desc: "Tender chicken in a velvety tomato-butter sauce — Punjab's most iconic dish.",
-    price: '₹650',
-  },
-];
+import DishCard from './DishCard';
+
+const SIZES = '(max-width: 740px) 90vw, (max-width: 1040px) 45vw, 380px';
 
 export default function Signatures() {
   return (
-    <section className="signatures">
-      <div className="sig-header reveal">
-        <p className="script">Chef&apos;s Recommendations</p>
-        <h2>Signature Dishes</h2>
-      </div>
-      <div className="sig-grid">
-        {dishes.map(dish => (
-          <article key={dish.name} className="sig-card reveal">
-            <div className="sig-img">
-              <img src={dish.img} alt={dish.alt} loading="lazy" />
-            </div>
-            <div className="sig-body">
-              <span className="sig-tag">{dish.tag}</span>
-              <h3>{dish.name}</h3>
-              <p>{dish.desc}</p>
-              <span className="sig-price">{dish.price}</span>
-            </div>
-          </article>
-        ))}
+    <section className="signatures section" aria-labelledby="signatures-title">
+      <div className="container">
+        <header className="section-head reveal">
+          <p className="script">Chef&apos;s recommendations</p>
+          <h2 id="signatures-title">Signature dishes</h2>
+        </header>
+        <div className="dish-grid dish-grid--3">
+          <DishCard
+            slug="dal-makhni"
+            image="dal-makhani"
+            alt="Dal makhni with a swirl of cream and a knob of butter"
+            name="Dal Makhni"
+            tag="Must try"
+            description="Black lentils slow-cooked into a rich, creamy, buttery gravy — the soul of Punjabi cooking."
+            sizes={SIZES}
+          />
+          <DishCard
+            slug="chicken-biryani"
+            image="chicken-biryani"
+            alt="Chicken biryani with raita on the side"
+            name="Chicken Biryani"
+            tag="Popular"
+            description="Aromatic basmati layered with tender chicken, whole spices and saffron. Served with curry and raita."
+            sizes={SIZES}
+          />
+          <DishCard
+            slug="butter-chicken"
+            image="butter-chicken-bowl"
+            alt="Butter chicken in a velvety tomato and butter gravy"
+            tag="Classic"
+            description="Tender chicken in a velvety tomato-butter sauce — Punjab's most iconic dish. Quarter, half or full."
+            sizes={SIZES}
+          />
+        </div>
       </div>
     </section>
   );

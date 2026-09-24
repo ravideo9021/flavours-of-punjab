@@ -1,129 +1,116 @@
 # Flavours Of Punjab
 
-A modern, production-grade restaurant website for **Flavours Of Punjab** -- an authentic Punjabi family restaurant serving vegetarian and non-vegetarian cuisine in New Delhi, India.
+Website for **Flavours Of Punjab**, an authentic Punjabi family restaurant in Old
+Rajinder Nagar, New Delhi — dine-in, takeaway, home delivery, parties and
+outdoor catering.
 
-Built with **Next.js 15** and **React 19**, featuring immersive animations, interactive components, and a fully responsive design.
+Built with **Next.js 16** (App Router, static pages) and **React 19**, plain CSS,
+and pre-optimised AVIF/WebP images.
 
-## Live Demo
+## What's in version 2
 
-Deployed on Vercel (link will be added after deployment).
+**Speed**
 
-## Features
+- Every photo is pre-optimised into responsive **AVIF + WebP** sizes
+  (`npm run images`), so phones download a 30–70 KB image instead of a 3–10 MB
+  PNG. Media went from 58 MB to what a visitor actually needs (~0.5 MB for the
+  first screen on a phone).
+- Hero backdrops are pre-blurred for a depth-of-field look (and ~8x smaller);
+  only the first slide loads up front, the next one is fetched in the background.
+- Fonts are self-hosted, subset and preloaded (one ~12 KB file per weight).
+- No runtime image optimiser, no middleware, no animation library: less
+  JavaScript, nothing that can hit a hosting quota.
+- Animations pause when off-screen or in a background tab and respect
+  "reduce motion". Scroll reveals use CSS scroll-driven animations (no JS).
 
-- **Hero Carousel** -- Full-screen slideshow with cinematic arc food animation, auto-advance, and manual navigation
-- **3D Coverflow Gallery** -- Draggable carousel with perspective transforms, momentum physics, and touch support
-- **Interactive Review Sphere** -- 3D rotating sphere of food images with auto-cycling Google reviews in a split layout
-- **Kinetic Matrix Canvas** -- Spring-mass lattice simulation with real-time physics, shockwave pulses, and marketing overlay
-- **Order Integration** -- Interactive hover buttons linking to Swiggy and Zomato with brand-colored animations
-- **Full Menu System** -- Tabbed menu with 6 categories, stagger-in animations, and 150+ dishes
-- **Smooth Scroll Effects** -- IntersectionObserver-based reveal animations, parallax layers, and scroll-spin elements
-- **Responsive Design** -- Optimized layouts for desktop, tablet, and mobile
-- **SEO Optimized** -- OpenGraph meta, structured data (JSON-LD), semantic HTML, and accessibility attributes
-- **Content Security Policy** -- Strict CSP headers via middleware for security hardening
+Lighthouse (mobile, simulated slow 4G) before → after: **Performance 42 → 92**,
+LCP 86 s → ~3.3 s (0.3 s on the actual trace), page weight 47 MB → 0.4 MB,
+Accessibility 89 → 99. Desktop: Performance 100.
 
-## Tech Stack
+**For guests**
 
-| Technology | Purpose |
+- Live **open / closed** status in Indian time, hours, directions, call and
+  WhatsApp one tap away (sticky action bar on phones).
+- **Menu** with search (understands "chicken" for *murg*, "potato" for *aloo*…),
+  Veg / Non-veg filter with **FSSAI-style marks**, Qtr / Half / Full price labels
+  and a printable full-menu page at `/menu`.
+- **Order online** via WhatsApp/phone (direct), Swiggy or Zomato.
+- **Events & catering** enquiry form that opens WhatsApp with the details filled in.
+- Gallery, reviews (links to your real Google / Zomato reviews), map that loads
+  on demand, storefront photo so people recognise the place.
+
+**Behind the scenes**
+
+- `Restaurant` + `Menu` structured data, sitemap, robots, web app manifest,
+  proper favicon / app icons and a share image for WhatsApp/Instagram links.
+- Security headers (CSP, HSTS, frame protection) from `next.config.mjs`.
+- Accessible: one `h1` per page, skip link, keyboard-friendly carousels with
+  pause controls, visible focus, WCAG-checked contrast.
+
+## Editing content
+
+| What | Where |
 |---|---|
-| Next.js 15 | React framework with App Router |
-| React 19 | UI library |
-| Framer Motion | Animation library |
-| Lucide React | Icon system |
-| Plain CSS | Custom design system with CSS variables |
+| Phone, WhatsApp, address, **opening hours**, Swiggy/Zomato/Instagram links | `data/site.js` |
+| Menu items, prices, veg / non-veg | `data/menu.js` |
+| Guest reviews shown on the site | `data/reviews.js` (real reviews only) |
+| Photos | `assets/photos/` then `npm run images` |
 
-## Project Structure
+Dish cards (signatures, starters, platters) read their names, prices and
+veg/non-veg marks from `data/menu.js`, so a price change only needs to be made
+once.
 
-```
-flavours-of-punjab/
-├── app/
-│   ├── globals.css        # Global styles, design system, all component CSS
-│   ├── layout.js          # Root layout with metadata, structured data
-│   └── page.js            # Home page composing all sections
-├── components/
-│   ├── Hero.jsx           # Hero carousel with arc food animation
-│   ├── About.jsx          # Restaurant story section
-│   ├── KineticMatrix.jsx  # Canvas physics animation + marketing CTA
-│   ├── Signatures.jsx     # Signature dishes showcase
-│   ├── StreetFood.jsx     # Tandoor starters grid
-│   ├── RiceDelights.jsx   # Rice dishes parallax section
-│   ├── FoodShowcase.jsx   # Visual food display with floating elements
-│   ├── PlattersBanner.jsx # Platters promotion banner
-│   ├── Menu.jsx           # Tabbed full menu system
-│   ├── Gallery.jsx        # Photo gallery using CoverflowCarousel
-│   ├── CoverflowCarousel.jsx # 3D coverflow carousel component
-│   ├── GlassHero.jsx      # Glassmorphism transition section
-│   ├── ReviewSphere.jsx   # 3D review sphere + review cards
-│   ├── Contact.jsx        # Contact info + Google Maps link
-│   ├── Newsletter.jsx     # Email subscription section
-│   ├── Header.jsx         # Navigation bar with call button
-│   ├── Footer.jsx         # Site footer
-│   └── ScrollEffects.jsx  # Global scroll-based animations
-├── data/
-│   └── menu.js            # Menu data (categories, items, prices)
-├── public/media/          # All images, fonts, and assets
-├── middleware.js           # CSP security headers
-└── next.config.mjs        # Next.js configuration
-```
+### Adding or replacing a photo
 
-## Getting Started
+1. Put the image in `assets/photos/` named like `paneer-butter-masala.webp`
+   (PNG/JPG work too; transparent cut-outs look best for dishes).
+2. Add it to the `IMAGES` list in `scripts/optimize-images.mjs` with a preset
+   (`cutout`, `photo`, `background` or `backdrop`).
+3. Run `npm run images` — it writes the responsive files to `public/media/` and
+   updates `data/images.json`. Unchanged photos are skipped.
+4. Use it: `<Picture name="paneer-butter-masala" alt="…" sizes="…" />`.
 
-### Prerequisites
-
-- Node.js 18+ (Node.js 20 recommended)
-- npm or yarn
-
-### Installation
+## Development
 
 ```bash
-git clone https://github.com/ravideo9021/flavours-of-punjab.git
-cd flavours-of-punjab
 npm install
+npm run dev        # http://localhost:4173
+npm run lint
+npm run build && npm start
 ```
 
-### Development
+Requires Node.js 20.9 or newer.
 
-```bash
-npm run dev
+Set `NEXT_PUBLIC_SITE_URL` (e.g. `https://www.yourdomain.in`) in your hosting
+provider when you move to a custom domain; canonical URLs, the sitemap and
+structured data use it.
+
+## Project structure
+
+```
+app/
+  layout.js          fonts, metadata, structured data, header/footer
+  page.js            home page sections
+  menu/page.js       full menu page (+ Menu structured data)
+  globals.css        design system and all styles
+  icon.svg, apple-icon.png, opengraph-image.jpg, manifest.js, robots.js, sitemap.js
+components/          one file per section / UI piece (Hero, MenuExplorer, Events…)
+data/                site facts, menu, reviews, generated image manifest
+lib/                 opening-hours logic, media-query hook
+assets/photos/       high-quality master photos (not served directly)
+assets/fonts/        self-hosted Barlow subsets (OFL)
+scripts/             image pipeline and brand-asset generator
+public/media/        generated AVIF/WebP files (content-hashed, cached forever)
 ```
 
-Open [http://localhost:4173](http://localhost:4173) in your browser.
+## Restaurant info
 
-### Production Build
-
-```bash
-npm run build
-npm start
-```
-
-## Deployment
-
-This project is configured for one-click deployment on Vercel:
-
-1. Push to GitHub
-2. Import the repository on [vercel.com](https://vercel.com)
-3. Vercel auto-detects Next.js and deploys
-
-No environment variables or additional configuration required.
-
-## Design System
-
-The project uses a custom CSS design system with CSS variables defined in `app/globals.css`:
-
-- `--accent` / `--saffron` / `--gold` -- Brand accent colors
-- `--red-cta` -- Call-to-action red
-- `--ink` / `--charcoal` / `--warm` -- Background tones
-- `--display` / `--script` -- Typography families
-- All images are self-hosted in `/public/media/` (no external CDN dependencies)
-
-## Restaurant Info
-
-- **Name:** Flavours Of Punjab
-- **Location:** 3/16, Shankar Rd, Block 3, Old Rajinder Nagar, New Delhi, Delhi 110060
-- **Phone:** +91 99102 97708
-- **Hours:** Mon-Sun, 11:00 AM - 11:00 PM
-- **Order Online:** [Swiggy](https://www.swiggy.com/city/delhi/flavours-of-punjab-shankar-main-road-rajinder-nagar-rest9826) | [Zomato](https://zomato.onelink.me/xqzv/5ynak9ns)
-- **Google Maps:** [View Location](https://www.google.com/maps/place/Flavours+Of+Punjab+Restaurant/@28.6366247,77.1812959,17z)
+- **Address:** 3/16, Shankar Road, Block 3, Old Rajinder Nagar, New Delhi 110060
+- **Phone:** +91 99102 97708 · **WhatsApp:** +91 82527 34533
+- **Order online:** [Swiggy](https://www.swiggy.com/city/delhi/flavours-of-punjab-shankar-main-road-rajinder-nagar-rest9826) · [Zomato](https://zomato.onelink.me/xqzv/5ynak9ns)
 
 ## License
 
-All rights reserved. This website and its content are the property of Flavours Of Punjab.
+All rights reserved. This website and its content are the property of
+Flavours Of Punjab. Barlow fonts are used under the SIL Open Font License
+(`assets/fonts/OFL.txt`); brand icons are from Simple Icons (CC0).
