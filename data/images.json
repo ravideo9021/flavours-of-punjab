@@ -1,0 +1,299 @@
+{
+  "hero-bg-butter-chicken": {
+    "w": 1484,
+    "h": 1060,
+    "hash": "f94b1cef",
+    "widths": [
+      640,
+      960,
+      1280,
+      1484
+    ],
+    "alpha": false,
+    "blur": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAABwAwCdASoUAA4APu1iqU2ppaOiMAgBMB2JbAC06BozXyHta2wA/tG0VeN5NiW8T6TLvNpGMCcFbtPaspic5haiUB1UAqmtoT7PUvgtJ8nSXCduAUgU/IIZOmAPqlQ4JLy2EbFSLcgWv6FpAAA="
+  },
+  "hero-bg-spices": {
+    "w": 1726,
+    "h": 911,
+    "hash": "ed6554b2",
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1726
+    ],
+    "alpha": false,
+    "blur": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAADQAwCdASoUAAsAPu1mqk2ppaQiMAgBMB2JQAALlOmdBsgQHn1dpQAA/syLxaIuM0qi94LHkzgQDdW6rQRgm3esCt4QOMuQI2Qr5CigLOBt0TkXAlGiG2+DwtBXIbPa4HGRGYAS6AEDGFnmbJ2AaYbIKinxtmyxZYAAAA=="
+  },
+  "hero-bg-slate": {
+    "w": 1920,
+    "h": 1730,
+    "hash": "7691b9e5",
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      1920
+    ],
+    "alpha": false,
+    "blur": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAQBQCdASoUABIAPu1kp06ppaMiMBgMATAdiWMAy6RWSH/dOE3UKlc0/t4uOuu778wAAP71zu2ZeJoLqGiDkjOOcvUj/iHlJAMbsndN8hdLVbcT1LlrYe1qCrg7w8aaEcL9J6hfU+cSWvL2mPrMLpAA"
+  },
+  "hero-bg-herbs": {
+    "w": 1448,
+    "h": 1086,
+    "hash": "4fd4348e",
+    "widths": [
+      640,
+      960,
+      1280,
+      1448
+    ],
+    "alpha": false,
+    "blur": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAADwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JYgCw7B6OYUt8eZsFRzwwAP7zJX1OQfLuNn8ATL0LMPJhIPp4VBmv4tgaB5qBIJjzMljFQXbRx3jIf3BCqJTM6m6AVsBFa/IWX6q5a2yZEn66SGlMLb0oSNIQ5CPyiKeWlhhgAAA="
+  },
+  "paneer-tikka-slate": {
+    "w": 1536,
+    "h": 1024,
+    "hash": "6a1963d0",
+    "widths": [
+      640,
+      960,
+      1280,
+      1536
+    ],
+    "alpha": false,
+    "blur": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAACwBACdASoUAA0APu1iqU2ppaOiMAgBMB2JbACdH8IzXb/4DJVPjEfs522NSz6AAP7CT3HdY/6uOJ1vDYL3FYr7xCM/jv23gE7E7K90AExkEPQ0PS9Xreqco35ULo5FSSJ8X+UzOFzPYv9QCAO36XP+ne3Zv4IIsSfZrDt/T0m6TWw5DcaakQ3BWr3nVhaD5T94hXeim4c64SrgAAA="
+  },
+  "butter-chicken-bowl": {
+    "w": 1228,
+    "h": 1199,
+    "hash": "0bc77633",
+    "widths": [
+      320,
+      480,
+      640,
+      800,
+      1080,
+      1228
+    ],
+    "alpha": true
+  },
+  "chicken-biryani": {
+    "w": 1536,
+    "h": 1024,
+    "hash": "1299d0b4",
+    "widths": [
+      320,
+      480,
+      640,
+      800,
+      1080,
+      1280
+    ],
+    "alpha": true
+  },
+  "veg-biryani": {
+    "w": 1466,
+    "h": 1016,
+    "hash": "da7b185d",
+    "widths": [
+      320,
+      480,
+      640,
+      800,
+      1080,
+      1280
+    ],
+    "alpha": true
+  },
+  "dal-makhani": {
+    "w": 1184,
+    "h": 1179,
+    "hash": "96d82688",
+    "widths": [
+      320,
+      480,
+      640,
+      800,
+      1080,
+      1184
+    ],
+    "alpha": true
+  },
+  "chicken-seekh": {
+    "w": 1507,
+    "h": 1024,
+    "hash": "3160b787",
+    "widths": [
+      320,
+      480,
+      640,
+      800,
+      1080,
+      1280
+    ],
+    "alpha": true
+  },
+  "malai-chaap": {
+    "w": 1536,
+    "h": 1007,
+    "hash": "ce612be4",
+    "widths": [
+      320,
+      480,
+      640,
+      800,
+      1080,
+      1280
+    ],
+    "alpha": true
+  },
+  "paneer-tikka-skewers": {
+    "w": 2400,
+    "h": 3664,
+    "hash": "959b4841",
+    "widths": [
+      320,
+      480,
+      640,
+      800,
+      1080,
+      1280
+    ],
+    "alpha": true
+  },
+  "paneer-tikka-bowl": {
+    "w": 1250,
+    "h": 1215,
+    "hash": "b87d2a37",
+    "widths": [
+      320,
+      480,
+      640,
+      800,
+      1080,
+      1250
+    ],
+    "alpha": true
+  },
+  "tandoori-chicken": {
+    "w": 1347,
+    "h": 1151,
+    "hash": "77eccf7b",
+    "widths": [
+      320,
+      480,
+      640,
+      800,
+      1080,
+      1280
+    ],
+    "alpha": true
+  },
+  "garlic-naan": {
+    "w": 1385,
+    "h": 1006,
+    "hash": "eaaccc1f",
+    "widths": [
+      320,
+      480,
+      640,
+      800,
+      1080,
+      1280
+    ],
+    "alpha": true
+  },
+  "rice-bowl": {
+    "w": 602,
+    "h": 492,
+    "hash": "71a2c999",
+    "widths": [
+      320,
+      480,
+      602
+    ],
+    "alpha": true
+  },
+  "jeera-rice": {
+    "w": 769,
+    "h": 661,
+    "hash": "f17f3ca2",
+    "widths": [
+      320,
+      480,
+      640,
+      769
+    ],
+    "alpha": true
+  },
+  "butter-chicken-kadai": {
+    "w": 960,
+    "h": 600,
+    "hash": "564f1fb8",
+    "widths": [
+      480,
+      640,
+      960
+    ],
+    "alpha": false,
+    "blur": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAACQBACdASoUAAwAPu1iqU2ppaOiMAgBMB2JbACdMoMYAD9/CbHZPHEJ9+yr9wAA98u023jBkiLs19N+LK3+sCRMf2G1SPas+j440ifw7vFZum5WCwFREFBB4FvBPsNPKkCdWDW4Sv6JCACZkz26qLULOBRlin66Ob6gxwAA"
+  },
+  "biryani-handi": {
+    "w": 1291,
+    "h": 641,
+    "hash": "71490fc8",
+    "widths": [
+      480,
+      640,
+      960,
+      1280,
+      1291
+    ],
+    "alpha": false,
+    "blur": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAAAQBACdASoUAAoAPu1iqU2ppaOiMAgBMB2JbACdMoMYADfhkJ39B1kAAAD+q65RloaUSomNE8qu4Mis2OteA1nKFEtwDYj6y/HsRq7OkWmXwwsvJ0s9kLHU6Qj86dCV73ImPLFtfMBFNvXlOaqgB/h43WrfJ4QjQHj8yF+F98k13XVUircs6pxt4EDcOTZwkJChOlwQAAA="
+  },
+  "storefront": {
+    "w": 1360,
+    "h": 907,
+    "hash": "c053dfcd",
+    "widths": [
+      480,
+      640,
+      960,
+      1280,
+      1360
+    ],
+    "alpha": false,
+    "blur": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAACQBACdASoUAA0APu1iqU2ppaOiMAgBMB2JbACdMoR4Lf/i1/2Qf/Hcx5RVGAAA/tJpv5InB2uSqf1/ZWjns2WdqtPNOCu24q1SstczmsVCrqWYWeFZnPAcx0WbD9EPugR7JiuQQLwro5MxphTAKX4AuClfELl+1IdegxP0DiJzN9Xcr0qxeePkuB/buW/ORxvAQAAA"
+  },
+  "birthday-party": {
+    "w": 1536,
+    "h": 1024,
+    "hash": "3735fdf2",
+    "widths": [
+      480,
+      640,
+      960,
+      1280,
+      1536
+    ],
+    "alpha": false,
+    "blur": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAwBACdASoUAA0APu1iqU2ppaOiMAgBMB2JZgCdMoRwABZ5Kqe7tuJUiCIA+jqpJYQVYtXEBmrnLQLGgRzdnPiWdbdmjgS2e0EjjbULdIkpshbFVTy45yeI/N6eTlDxtaKfVxSRnuHMKW68heGxk8i4Ut50jWoHl4RbOl87IJ8B3nsuwkHgAA=="
+  },
+  "kitty-party": {
+    "w": 1060,
+    "h": 1484,
+    "hash": "da114aca",
+    "widths": [
+      480,
+      640,
+      960,
+      1060
+    ],
+    "alpha": false,
+    "blur": "data:image/webp;base64,UklGRuoAAABXRUJQVlA4IN4AAABQBQCdASoUABwAPu1ipk4ppSMiMBgMATAdiWgAnQHdoYGKzrDtRKBJnW1PFSarVDKvasAA/vB5WzV/Kg1Mlq+3oUoo0SyN/QMNiOD53exm2gdqbBzj3q2qarspRjhukVqSBMS6WWSkSp92za36yYYf3nx4Jgb33qCCqZ8byIGEcrqt5dZNLCieLliKH7hmKGNsEidW4jfSvTbXc4iPyBGdMyXlftindUhRSsKWDcvpJdGv5fj4DDsbQIc7iBp45Bk2oJ9HwLiNuIHu//5a87d254R5qzS9Dwtlh3sAAAA="
+  }
+}

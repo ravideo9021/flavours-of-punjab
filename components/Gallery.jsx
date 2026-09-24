@@ -1,43 +1,28 @@
-'use client';
 import CoverflowCarousel from './CoverflowCarousel';
 
-const slides = [
-  { src: '/media/Butter-Chicken.jpg', alt: 'Butter Chicken curry', title: 'Butter Chicken', subtitle: 'Signature' },
-  { src: '/media/paneer%20tikka.png', alt: 'Paneer Tikka grilled', title: 'Paneer Tikka', subtitle: 'Tandoor Grill' },
-  { src: '/media/Dal%20Makhani.png', alt: 'Dal Makhani slow-cooked', title: 'Dal Makhni', subtitle: 'Slow-Cooked' },
-  { src: '/media/tandoori_chicken.png', alt: 'Tandoori Chicken', title: 'Tandoori Chicken', subtitle: 'Clay Oven' },
-  { src: '/media/veg_biryani_bg.jpg', alt: 'Veg Biryani in handi', title: 'Veg Biryani', subtitle: 'Dum Cooked' },
-  { src: '/media/palak_paneer.jpg', alt: 'Palak Paneer', title: 'Palak Paneer', subtitle: 'Iron Rich' },
-  { src: '/media/Malai_chaap.png', alt: 'Malai Chaap', title: 'Malai Chaap', subtitle: 'Creamy Delight' },
-  { src: '/media/tandoori_paneer_platter.png', alt: 'Tandoori paneer platter', title: 'Tandoori Platter', subtitle: 'Chef Special' },
-  { src: '/media/garlic_naan.png', alt: 'Fresh garlic naan basket', title: 'Garlic Naan', subtitle: 'Tandoor Fresh' },
-  { src: '/media/chiken_biryani_bowl.png', alt: 'Chicken Biryani bowl', title: 'Chicken Biryani', subtitle: 'Royal' },
-  { src: '/media/Chicken%20Seekh%20Chatpata%20.png', alt: 'Chicken Seekh Chatpata', title: 'Seekh Chatpata', subtitle: 'Grilled' },
-  { src: '/media/juice.jpg', alt: 'Mango Lassi drink', title: 'Mango Lassi', subtitle: 'Refreshing' },
+const SLIDES = [
+  { image: 'butter-chicken-kadai', alt: 'Butter chicken in a copper kadai', title: 'Butter Chicken', subtitle: 'Signature' },
+  { image: 'paneer-tikka-skewers', alt: 'Paneer tikka skewers', title: 'Paneer Tikka', subtitle: 'Tandoor grill', fit: 'contain' },
+  { image: 'dal-makhani', alt: 'Dal makhni with cream', title: 'Dal Makhni', subtitle: 'Slow-cooked', fit: 'contain' },
+  { image: 'tandoori-chicken', alt: 'Tandoori chicken platter', title: 'Tandoori Chicken', subtitle: 'Clay oven', fit: 'contain' },
+  { image: 'biryani-handi', alt: 'Biryani in a copper handi', title: 'Biryani', subtitle: 'Dum cooked' },
+  { image: 'malai-chaap', alt: 'Malai chaap skewers', title: 'Malai Chaap', subtitle: 'Creamy delight', fit: 'contain' },
+  { image: 'garlic-naan', alt: 'Basket of garlic naan', title: 'Garlic Naan', subtitle: 'Fresh from the tandoor', fit: 'contain' },
+  { image: 'chicken-biryani', alt: 'Chicken biryani', title: 'Chicken Biryani', subtitle: 'Royal', fit: 'contain' },
+  { image: 'chicken-seekh', alt: 'Chicken seekh kebabs', title: 'Seekh Chatpata', subtitle: 'Grilled', fit: 'contain' },
+  { image: 'paneer-tikka-bowl', alt: 'Paneer tikka with peppers and onion', title: 'Paneer Tikka', subtitle: 'Char-grilled', fit: 'contain' },
+  { image: 'veg-biryani', alt: 'Vegetable biryani', title: 'Veg Biryani', subtitle: 'Garden fresh', fit: 'contain' },
+  { image: 'jeera-rice', alt: 'Jeera rice', title: 'Jeera Rice', subtitle: 'Fragrant', fit: 'contain' },
 ];
 
 export default function Gallery() {
   return (
-    <section className="gallery-section" id="gallery">
-      <div className="gallery-top reveal">
-        <p className="script">Visual Feast</p>
-        <h2>From Our Kitchen</h2>
-      </div>
-      <CoverflowCarousel
-        slides={slides}
-        showCaption
-        showNavigation
-        showPagination
-        loop
-        cardWidth="clamp(180px, 25vw, 300px)"
-        rotate={44}
-        depth={0.6}
-        perspective={3}
-        falloff={0.56}
-        fade={0.1}
-        gap={0.05}
-        label="Food gallery carousel"
-      />
+    <section className="gallery section" id="gallery" aria-labelledby="gallery-title">
+      <header className="section-head reveal">
+        <p className="script">Visual feast</p>
+        <h2 id="gallery-title">From our kitchen</h2>
+      </header>
+      <CoverflowCarousel slides={SLIDES} label="Food gallery" cardWidth="clamp(190px, 25vw, 300px)" sizes="(max-width: 740px) 50vw, 300px" />
     </section>
   );
 }

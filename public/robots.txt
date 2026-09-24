@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://flavours-of-punjab.vercel.app/sitemap.xml
