@@ -1,37 +1,43 @@
 import Hero from '@/components/Hero';
+import InfoBar from '@/components/InfoBar';
 import About from '@/components/About';
-import KineticMatrix from '@/components/KineticMatrix';
 import Signatures from '@/components/Signatures';
-import StreetFood from '@/components/StreetFood';
+import Ticker from '@/components/Ticker';
+import Starters from '@/components/Starters';
 import RiceDelights from '@/components/RiceDelights';
-import FoodShowcase from '@/components/FoodShowcase';
-import Menu from '@/components/Menu';
+import OrderOnline from '@/components/OrderOnline';
+import MenuSection from '@/components/MenuSection';
 import PlattersBanner from '@/components/PlattersBanner';
-import PartyServices from '@/components/PartyServices';
+import Events from '@/components/Events';
 import Gallery from '@/components/Gallery';
-import GlassHero from '@/components/GlassHero';
-import ReviewSphere from '@/components/ReviewSphere';
-import Contact from '@/components/Contact';
-import Newsletter from '@/components/Newsletter';
+import Reviews from '@/components/Reviews';
+import Visit from '@/components/Visit';
+import StayConnected from '@/components/StayConnected';
 
 export default function Home() {
   return (
     <>
       <Hero />
+      <InfoBar />
       <About />
-      <KineticMatrix />
       <Signatures />
-      <StreetFood />
+      <Ticker
+        variant="dark"
+        items={['Tandoori', 'Biryani', 'Butter Chicken', 'Dal Makhni', 'Naan', 'Malai Chaap', 'Paneer Tikka', 'Rogan Josh']}
+      />
+      <Starters />
       <RiceDelights />
-      <FoodShowcase />
+      <OrderOnline />
+      <MenuSection />
+      <Ticker
+        items={['Butter Chicken', 'Dal Makhni', 'Biryani', 'Tandoori', 'Paneer Tikka', 'Garlic Naan', 'Rogan Josh', 'Seekh Kebab']}
+      />
       <PlattersBanner />
-      <Menu />
-      <PartyServices />
+      <Events />
       <Gallery />
-      <GlassHero />
-      <ReviewSphere />
-      <Contact />
-      <Newsletter />
+      <Reviews />
+      <Visit />
+      <StayConnected />
     </>
   );
 }

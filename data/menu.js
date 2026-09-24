@@ -1,254 +1,330 @@
-export const menuCategories = [
-  { key: 'starters', label: 'Starters' },
-  { key: 'tawa', label: 'Tawa & Tandoor' },
-  { key: 'curries', label: 'Curries' },
-  { key: 'chinese', label: 'Indo-Chinese' },
-  { key: 'rice', label: 'Rice & Breads' },
-  { key: 'extras', label: 'Extras' },
+/**
+ * The full menu — the single source of truth for the menu section, the /menu
+ * page, dish cards and structured data. Prices are in rupees.
+ *
+ * - `diet`: 'veg' | 'nonveg' | 'both' (drives the FSSAI-style green / brown marks)
+ * - `prices`: one number, or several matching the section's `portions`
+ *   (when an item has fewer prices than portions, they map to the last ones,
+ *   e.g. two prices in a Qtr / Half / Full section = Half / Full)
+ * - `special`: highlighted as a chef's special
+ *
+ * Items marked "diet assumed" were not labelled on the original menu; please
+ * confirm them.
+ */
+
+export const menu = [
+  {
+    id: 'starters',
+    label: 'Starters',
+    blurb: 'Soups, tandoor starters and platters',
+    sections: [
+      {
+        title: 'Soups',
+        portions: ['Veg', 'Non-Veg'],
+        items: [
+          { name: 'Manchow Soup', diet: 'both', prices: [150, 190] },
+          { name: 'Hot N Sour Soup', diet: 'both', prices: [150, 190] },
+          { name: 'Sweet Corn Soup', diet: 'both', prices: [150, 190] },
+        ],
+      },
+      {
+        title: 'Non-Veg Starters',
+        portions: ['Half', 'Full'],
+        items: [
+          { name: 'Tandoori Chicken', diet: 'nonveg', prices: [290, 450] },
+          { name: 'Afghani Chicken', diet: 'nonveg', prices: [320, 480] },
+          { name: 'Bhatti Murg', diet: 'nonveg', prices: [330, 490] },
+          { name: 'Chicken Chatpata', diet: 'nonveg', prices: [320, 480] },
+          { name: 'Murg Kali Mirch', diet: 'nonveg', prices: [330, 490] },
+          { name: 'Murg Tikka', diet: 'nonveg', prices: [240, 370] },
+          { name: 'Malai Chicken Tikka', diet: 'nonveg', prices: [250, 370] },
+          { name: 'Murg Tikka Garlic Flavour', diet: 'nonveg', prices: [250, 370] },
+          { name: 'Murg Kali Mirch Tikka', diet: 'nonveg', prices: [250, 370] },
+          { name: 'Murg Tikka Achari', diet: 'nonveg', prices: [250, 370] },
+          { name: 'Murg Tikka Hariyali', diet: 'nonveg', prices: [250, 370] },
+          { name: 'Chicken Seekh Chatpata', diet: 'nonveg', prices: [240, 350] },
+          { name: 'Mutton Seekh Karari', diet: 'nonveg', prices: [250, 370] },
+        ],
+      },
+      {
+        title: 'Veg Starters',
+        items: [
+          { name: 'Paneer Tikka', diet: 'veg', prices: [310] },
+          { name: 'Paneer Kali Mirch Tikka', diet: 'veg', prices: [320] },
+          { name: 'Paneer Tikka Malai', diet: 'veg', prices: [320] },
+          { name: 'Paneer Tikka Hariyali', diet: 'veg', prices: [320] },
+          { name: 'Tandoori Aloo', diet: 'veg', prices: [320] },
+          { name: 'Afghani Chaap', diet: 'veg', prices: [290] },
+          { name: 'Malai Chaap', diet: 'veg', prices: [310] },
+          { name: 'Chatpati Chaap', diet: 'veg', prices: [290] },
+          { name: 'Bharwa Chaap', diet: 'veg', prices: [370] },
+          { name: 'Hariyali Chaap', diet: 'veg', prices: [290] },
+          { name: 'Dahi Ke Chholay', diet: 'veg', prices: [360] },
+          { name: 'Tandoori Mushroom', diet: 'veg', prices: [360] },
+          { name: 'Tandoori Bharwa Mushroom', diet: 'veg', prices: [400] },
+        ],
+      },
+      {
+        title: 'Special Platters',
+        items: [
+          { name: 'Tandoori Platter (Non-Veg)', slug: 'tandoori-platter-nonveg', diet: 'nonveg', prices: [580], special: true },
+          { name: 'Special Tandoori Platter (Veg)', slug: 'tandoori-platter-veg', diet: 'veg', prices: [540], special: true },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'non-veg-mains',
+    label: 'Non-Veg Mains',
+    blurb: 'Tawa and handi chicken, mutton and egg',
+    sections: [
+      {
+        title: 'Tawa Non-Veg',
+        portions: ['Qtr', 'Half', 'Full'],
+        items: [
+          { name: 'Butter Chicken', diet: 'nonveg', prices: [290, 440, 650] },
+          { name: 'Butter Chicken (Boneless)', diet: 'nonveg', prices: [300, 480, 690] },
+          { name: 'Kadhai Chicken', diet: 'nonveg', prices: [290, 440, 650] },
+          { name: 'Kadhai Chicken (Boneless)', diet: 'nonveg', prices: [300, 480, 690] },
+          { name: 'Chicken Tikka Butter Masala', diet: 'nonveg', prices: [480, 690] },
+          { name: 'Chicken Butter Masala', diet: 'nonveg', prices: [440, 650] },
+          { name: 'Murg Masala', diet: 'nonveg', prices: [480, 690] },
+          { name: 'Ghar Ka Murg', diet: 'nonveg', prices: [480, 690] },
+          { name: 'Murg Kali Mirch', slug: 'murg-kali-mirch-curry', diet: 'nonveg', prices: [480, 690] },
+          { name: 'Chicken Patiala', diet: 'nonveg', prices: [790] },
+          { name: 'Murg Do Pyaza', diet: 'nonveg', prices: [440, 650] },
+        ],
+      },
+      {
+        title: 'Non-Veg Curries',
+        portions: ['Half', 'Full'],
+        items: [
+          { name: 'Tawa Seekh Butter Masala', diet: 'nonveg', prices: [450] },
+          { name: 'Chicken Curry', diet: 'nonveg', prices: [440, 650] },
+          { name: 'Murg Rara', diet: 'nonveg', prices: [480, 690] },
+          { name: 'Takata Tawa Masala', diet: 'nonveg', prices: [440, 650] },
+          { name: 'Chicken Lababdar', diet: 'nonveg', prices: [440, 650] },
+          { name: 'Mutton Rogan Josh', diet: 'nonveg', prices: [320, 470] },
+          { name: 'Mutton Masala', diet: 'nonveg', prices: [320, 470] },
+          { name: 'Mutton Seekh Masala', diet: 'nonveg', prices: [450] },
+          { name: 'Keema Meat', diet: 'nonveg', prices: [350, 480] },
+          { name: 'Egg Curry', diet: 'nonveg', prices: [260, 380] },
+          { name: 'Chef Spl. Beleram Boneless Chicken', diet: 'nonveg', prices: [540, 780], special: true },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'veg-mains',
+    label: 'Veg Mains',
+    blurb: 'Dal, paneer and vegetable curries',
+    sections: [
+      {
+        title: 'Dal & Paneer',
+        items: [
+          { name: 'Chef Spl. Dal Makhni', slug: 'dal-makhni', diet: 'veg', prices: [240], special: true },
+          { name: 'Spl. Punjabi Dal Tadka', diet: 'veg', prices: [235] },
+          { name: 'Rajma', diet: 'veg', prices: [260] },
+          { name: 'Chana Masala', diet: 'veg', prices: [250] },
+          { name: 'Paneer Makhni', diet: 'veg', prices: [310] },
+          { name: 'Palak Paneer', diet: 'veg', prices: [310] },
+          { name: 'Kadhai Paneer', diet: 'veg', prices: [310] },
+          { name: 'Tawa Paneer Masala', diet: 'veg', prices: [310] },
+          { name: 'Paneer Tikka Butter Masala', diet: 'veg', prices: [320] },
+          { name: 'Paneer Butter Masala', diet: 'veg', prices: [320] },
+          { name: 'Shahi Paneer', diet: 'veg', prices: [320] },
+          { name: 'Paneer Lababdar', diet: 'veg', prices: [320] },
+          { name: 'Aloo Jeera', diet: 'veg', prices: [300] },
+        ],
+      },
+      {
+        title: 'Veg Specials',
+        items: [
+          { name: 'Mutter Paneer', diet: 'veg', prices: [310] },
+          { name: 'Tawa Mushroom Masala', diet: 'veg', prices: [310] },
+          { name: 'Khumb Do Pyaza', diet: 'veg', prices: [310] },
+          { name: 'Sabzi Miloni (Mix Veg)', diet: 'veg', prices: [310] },
+          { name: 'Shahi Malai Kofta Bharwan', diet: 'veg', prices: [350] },
+          { name: 'Paneer Pasanda', diet: 'veg', prices: [350] },
+          { name: 'Chaap Pasaala', diet: 'veg', prices: [310] },
+          { name: 'Veg Soya Rogan Josh', diet: 'veg', prices: [310] },
+          { name: 'Soya Keema Mutter', diet: 'veg', prices: [310] },
+          { name: 'Dum Aloo Kashmiri', diet: 'veg', prices: [250] },
+          { name: 'Methi Malai Mutter', diet: 'veg', prices: [350] },
+          { name: 'Palak Corn', diet: 'veg', prices: [350] },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'indo-chinese',
+    label: 'Indo-Chinese',
+    blurb: 'Chilli, Manchurian, fried rice and noodles',
+    sections: [
+      {
+        title: 'Veg',
+        portions: ['Half', 'Full'],
+        items: [
+          { name: 'Chilli Paneer (Dry / Gravy)', diet: 'veg', prices: [290, 340] },
+          { name: 'Veg Manchurian (Dry / Gravy)', diet: 'veg', prices: [330, 370] },
+          { name: 'Honey Crispy Potato', diet: 'veg', prices: [270] },
+          { name: 'Chilli Potato', diet: 'veg', prices: [270] },
+          { name: 'Chilli Mushroom (Dry / Gravy)', diet: 'veg', prices: [370, 400] },
+          { name: 'Chilli Chaap (Dry / Gravy)', diet: 'veg', prices: [320, 360] },
+        ],
+      },
+      {
+        title: 'Non-Veg',
+        portions: ['Half', 'Full'],
+        items: [
+          { name: 'Chilli Chicken (Dry / Gravy)', diet: 'nonveg', prices: [370, 410] },
+          { name: 'Chicken Salt & Pepper', diet: 'nonveg', prices: [440] },
+          { name: 'Chicken Manchurian (Dry / Gravy)', diet: 'nonveg', prices: [440, 470] },
+          { name: 'Chicken in Hot Garlic Sauce', diet: 'nonveg', prices: [450] },
+          { name: 'Chicken Lollipop', diet: 'nonveg', prices: [440] },
+          { name: 'Chilli Fish (Dry / Gravy)', diet: 'nonveg', prices: [540, 580] },
+        ],
+      },
+      {
+        title: 'Fried Rice',
+        items: [
+          { name: 'Veg Fried Rice', diet: 'veg', prices: [260] },
+          { name: 'Egg Fried Rice', diet: 'nonveg', prices: [320] },
+          { name: 'Chicken Fried Rice', diet: 'nonveg', prices: [350] },
+          { name: 'Mix Fried Rice (incl. Chicken)', diet: 'nonveg', prices: [360] },
+        ],
+      },
+      {
+        title: 'Noodles',
+        items: [
+          { name: 'Veg Noodles', diet: 'veg', prices: [220] },
+          { name: 'Egg Noodles', diet: 'nonveg', prices: [250] },
+          { name: 'Chicken Noodles', diet: 'nonveg', prices: [300] },
+          { name: 'Hakka Noodles', diet: 'veg', prices: [230] }, // diet assumed
+          { name: 'Chilli Garlic Noodles', diet: 'veg', prices: [230] }, // diet assumed
+          { name: 'Mix Noodles', diet: 'nonveg', prices: [320] }, // diet assumed
+        ],
+      },
+    ],
+  },
+  {
+    id: 'rice-breads',
+    label: 'Rice & Breads',
+    blurb: 'Biryani, rice and breads from the tandoor',
+    sections: [
+      {
+        title: 'Rice & Biryani',
+        items: [
+          { name: 'Plain Rice', diet: 'veg', prices: [140] },
+          { name: 'Jeera Rice', diet: 'veg', prices: [170] },
+          { name: 'Veg Biryani with Raita', slug: 'veg-biryani', diet: 'veg', prices: [310] },
+          { name: 'Egg Biryani with Curry / Raita', diet: 'nonveg', prices: [330] },
+          { name: 'Chicken Biryani with Curry / Raita', slug: 'chicken-biryani', diet: 'nonveg', prices: [370] },
+          { name: 'Mutton Biryani with Curry / Raita', diet: 'nonveg', prices: [390] },
+        ],
+      },
+      {
+        title: 'Breads',
+        items: [
+          { name: 'Tandoori Roti', diet: 'veg', prices: [20] },
+          { name: 'Butter Roti', diet: 'veg', prices: [25] },
+          { name: 'Rumali Roti', diet: 'veg', prices: [20] },
+          { name: 'Plain Naan', diet: 'veg', prices: [45] },
+          { name: 'Butter Naan', diet: 'veg', prices: [50] },
+          { name: 'Missi Roti', diet: 'veg', prices: [65] },
+          { name: 'Garlic Naan', diet: 'veg', prices: [55] },
+          { name: 'Laccha Paratha', diet: 'veg', prices: [55] },
+          { name: 'Pudina Paratha', diet: 'veg', prices: [55] },
+          { name: 'Mirchi Paratha (Red / Green)', diet: 'veg', prices: [55] },
+          { name: 'Paneer Paratha', diet: 'veg', prices: [125] },
+          { name: 'Aloo Paratha', diet: 'veg', prices: [95] },
+          { name: 'Amritsari Kulcha', diet: 'veg', prices: [140] },
+          { name: 'Mutton Keema Naan', diet: 'nonveg', prices: [170] },
+          { name: 'Chicken Keema Naan', diet: 'nonveg', prices: [160] },
+          { name: 'Mutton Keema Naan with Gravy', diet: 'nonveg', prices: [270] },
+          { name: 'Chicken Keema Naan with Gravy', diet: 'nonveg', prices: [260] },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'sides-drinks',
+    label: 'Sides & Drinks',
+    blurb: 'Raita, salad, papad, drinks and dessert',
+    sections: [
+      {
+        title: 'Sides',
+        items: [
+          { name: 'Mix Raita', diet: 'veg', prices: [130] },
+          { name: 'Plain Curd', diet: 'veg', prices: [120] },
+          { name: 'Pineapple Raita', diet: 'veg', prices: [180] },
+          { name: 'Boondi Raita', diet: 'veg', prices: [130] },
+          { name: 'Green Salad', diet: 'veg', prices: [130] },
+          { name: 'Roasted Papad', diet: 'veg', prices: [60] },
+          { name: 'Masala Papad', diet: 'veg', prices: [70] },
+          { name: 'Fried Papad', diet: 'veg', prices: [80] },
+        ],
+      },
+      {
+        title: 'Drinks',
+        items: [
+          { name: 'Soft Drinks', diet: 'veg', prices: [] },
+          { name: 'Water Bottle', diet: 'veg', prices: [] },
+          { name: 'Fresh Lime', diet: 'veg', prices: [120] },
+          { name: 'Sweet / Salted Lassi', diet: 'veg', prices: [120] },
+        ],
+      },
+      {
+        title: 'Desserts',
+        items: [{ name: 'Gulab Jamun', diet: 'veg', prices: [150], special: true }],
+      },
+    ],
+  },
 ];
 
-export const menuData = {
-  starters: [
-    {
-      title: 'Soups',
-      items: [
-        { name: 'Manchow Soup (Veg / Non-Veg)', price: '₹150 / ₹190' },
-        { name: 'Hot N Sour Soup (Veg / Non-Veg)', price: '₹150 / ₹190' },
-        { name: 'Sweet Corn Soup (Veg / Non-Veg)', price: '₹150 / ₹190' },
-      ],
-    },
-    {
-      title: 'Non-Veg Starters',
-      subtitle: 'Half / Full',
-      items: [
-        { name: 'Tandoori Chicken', price: '₹290 / ₹450' },
-        { name: 'Afghani Chicken', price: '₹320 / ₹480' },
-        { name: 'Bhatti Murg', price: '₹330 / ₹490' },
-        { name: 'Chicken Chatpata', price: '₹320 / ₹480' },
-        { name: 'Murg Kali Mirch', price: '₹330 / ₹490' },
-        { name: 'Murg Tikka', price: '₹240 / ₹370' },
-        { name: 'Malai Chicken Tikka', price: '₹250 / ₹370' },
-        { name: 'Murg Tikka Garlic Flavour', price: '₹250 / ₹370' },
-        { name: 'Murg Kali Mirch Tikka', price: '₹250 / ₹370' },
-        { name: 'Murg Tikka Achari', price: '₹250 / ₹370' },
-        { name: 'Murg Tikka Hariyali', price: '₹250 / ₹370' },
-        { name: 'Chicken Seekh Chatpata', price: '₹240 / ₹350' },
-        { name: 'Mutton Seekh Karari', price: '₹250 / ₹370' },
-      ],
-    },
-    {
-      title: 'Veg Starters',
-      items: [
-        { name: 'Paneer Tikka', price: '₹310' },
-        { name: 'Paneer Kali Mirch Tikka', price: '₹320' },
-        { name: 'Paneer Tikka Malai', price: '₹320' },
-        { name: 'Paneer Tikka Hariyali', price: '₹320' },
-        { name: 'Tandoori Aloo', price: '₹320' },
-        { name: 'Afghani Chaap', price: '₹290' },
-        { name: 'Malai Chaap', price: '₹310' },
-        { name: 'Chatpati Chaap', price: '₹290' },
-        { name: 'Bharwa Chaap', price: '₹370' },
-        { name: 'Hariyali Chaap', price: '₹290' },
-        { name: 'Dahi Ke Chholay', price: '₹360' },
-        { name: 'Tandoori Mushroom', price: '₹360' },
-        { name: 'Tandoori Bharwa Mushroom', price: '₹400' },
-      ],
-    },
-    {
-      title: 'Special Platters',
-      items: [
-        { name: 'Tandoori Platter (Non-Veg)', price: '₹580', highlight: true },
-        { name: 'Special Tandoori Platter (Veg)', price: '₹540', highlight: true },
-      ],
-    },
-  ],
+export const slugify = (text) =>
+  text
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
 
-  tawa: [
-    {
-      title: 'Tawa Non-Veg',
-      subtitle: 'Qtr / Half / Full',
-      items: [
-        { name: 'Butter Chicken', price: '₹290 / ₹440 / ₹650' },
-        { name: 'Butter Chicken (Boneless)', price: '₹300 / ₹480 / ₹690' },
-        { name: 'Kadhai Chicken', price: '₹290 / ₹440 / ₹650' },
-        { name: 'Kadhai Chicken (Boneless)', price: '₹300 / ₹480 / ₹690' },
-        { name: 'Chicken Tikka Butter Masala', price: '₹480 / ₹690' },
-        { name: 'Chicken Butter Masala', price: '₹440 / ₹650' },
-        { name: 'Murg Masala', price: '₹480 / ₹690' },
-        { name: 'Ghar Ka Murg', price: '₹480 / ₹690' },
-        { name: 'Murg Kali Mirch', price: '₹480 / ₹690' },
-        { name: 'Chicken Patiala', price: '₹790' },
-        { name: 'Murg Do Pyaza', price: '₹440 / ₹650' },
-      ],
-    },
-    {
-      title: ' ',
-      subtitle: 'Half / Full',
-      items: [
-        { name: 'Tawa Seekh Butter Masala', price: '₹450' },
-        { name: 'Chicken Curry', price: '₹440 / ₹650' },
-        { name: 'Murg Rara', price: '₹480 / ₹690' },
-        { name: 'Takata Tawa Masala', price: '₹440 / ₹650' },
-        { name: 'Chicken Lababdar', price: '₹440 / ₹650' },
-        { name: 'Mutton Rogan Josh', price: '₹320 / ₹470' },
-        { name: 'Mutton Masala', price: '₹320 / ₹470' },
-        { name: 'Mutton Seekh Masala', price: '₹450' },
-        { name: 'Keema Meat', price: '₹350 / ₹480' },
-        { name: 'Egg Curry', price: '₹260 / ₹380' },
-        { name: 'Chef Spl. Beleram Boneless Chicken', price: '₹540 / ₹780', highlight: true },
-      ],
-    },
-  ],
+/** Every item with its category/section context and a stable slug. */
+export const allItems = menu.flatMap((category) =>
+  category.sections.flatMap((section) =>
+    section.items.map((item) => ({
+      ...item,
+      slug: item.slug ?? slugify(item.name),
+      categoryId: category.id,
+      section: section.title,
+      portions: section.portions,
+    })),
+  ),
+);
 
-  curries: [
-    {
-      title: 'Handi & Tawa',
-      items: [
-        { name: 'Chef Spl. Dal Makhni', price: '₹240', highlight: true },
-        { name: 'Spl. Punjabi Dal Tadka', price: '₹235' },
-        { name: 'Rajma', price: '₹260' },
-        { name: 'Chana Masala', price: '₹250' },
-        { name: 'Paneer Makhni', price: '₹310' },
-        { name: 'Palak Paneer', price: '₹310' },
-        { name: 'Kadhai Paneer', price: '₹310' },
-        { name: 'Tawa Paneer Masala', price: '₹310' },
-        { name: 'Paneer Tikka Butter Masala', price: '₹320' },
-        { name: 'Paneer Butter Masala', price: '₹320' },
-        { name: 'Shahi Paneer', price: '₹320' },
-        { name: 'Paneer Lababdar', price: '₹320' },
-        { name: 'Aloo Jeera', price: '₹300' },
-      ],
-    },
-    {
-      title: ' ',
-      items: [
-        { name: 'Mutter Paneer', price: '₹310' },
-        { name: 'Tawa Mushroom Masala', price: '₹310' },
-        { name: 'Khumb Do Pyaza', price: '₹310' },
-        { name: 'Sabzi Miloni (Mix Veg)', price: '₹310' },
-        { name: 'Shahi Malai Kofta Bharwan', price: '₹350' },
-        { name: 'Paneer Pasanda', price: '₹350' },
-        { name: 'Chaap Pasaala', price: '₹310' },
-        { name: 'Veg Soya Rogan Josh', price: '₹310' },
-        { name: 'Soya Keema Mutter', price: '₹310' },
-        { name: 'Dum Aloo Kashmiri', price: '₹250' },
-        { name: 'Methi Malai Mutter', price: '₹350' },
-        { name: 'Palak Corn', price: '₹350' },
-      ],
-    },
-  ],
+const bySlug = new Map(allItems.map((item) => [item.slug, item]));
 
-  chinese: [
-    {
-      title: 'Veg',
-      subtitle: 'Half / Full',
-      items: [
-        { name: 'Chilli Paneer (Dry/Gravy)', price: '₹290 / ₹340' },
-        { name: 'Veg Manchurian (Dry/Gravy)', price: '₹330 / ₹370' },
-        { name: 'Honey Crispy Potato', price: '₹270' },
-        { name: 'Chilli Potato', price: '₹270' },
-        { name: 'Chilli Mushroom (Dry/Gravy)', price: '₹370 / ₹400' },
-        { name: 'Chilli Chaap (Dry/Gravy)', price: '₹320 / ₹360' },
-      ],
-    },
-    {
-      title: 'Non-Veg',
-      subtitle: 'Half / Full',
-      items: [
-        { name: 'Chilli Chicken (Dry/Gravy)', price: '₹370 / ₹410' },
-        { name: 'Chicken Salt & Pepper', price: '₹440' },
-        { name: 'Chicken Manchurian (Dry/Gravy)', price: '₹440 / ₹470' },
-        { name: 'Chicken in Hot Garlic Sauce', price: '₹450' },
-        { name: 'Chicken Lollipop', price: '₹440' },
-        { name: 'Chilli Fish (Dry/Gravy)', price: '₹540 / ₹580' },
-      ],
-    },
-  ],
+export function getItem(slug) {
+  const item = bySlug.get(slug);
+  if (!item) throw new Error(`Unknown menu item "${slug}"`);
+  return item;
+}
 
-  rice: [
-    {
-      title: 'Rice & Biryani',
-      items: [
-        { name: 'Plain Rice', price: '₹140' },
-        { name: 'Jeera Rice', price: '₹170' },
-        { name: 'Veg Biryani with Raita', price: '₹310' },
-        { name: 'Egg Biryani Curry / Raita', price: '₹330' },
-        { name: 'Chicken Biryani Curry / Raita', price: '₹370' },
-        { name: 'Mutton Biryani Curry / Raita', price: '₹390' },
-      ],
-    },
-    {
-      title: 'Fried Rice',
-      items: [
-        { name: 'Veg Fried Rice', price: '₹260' },
-        { name: 'Egg Fried Rice', price: '₹320' },
-        { name: 'Chicken Fried Rice', price: '₹350' },
-        { name: 'Mix Fried Rice (Incl. Chicken)', price: '₹360' },
-      ],
-    },
-    {
-      title: 'Noodles',
-      items: [
-        { name: 'Veg Noodles', price: '₹220' },
-        { name: 'Egg Noodles', price: '₹250' },
-        { name: 'Chicken Noodles', price: '₹300' },
-        { name: 'Hakka Noodles', price: '₹230' },
-        { name: 'Chilli Garlic Noodles', price: '₹230' },
-        { name: 'Mix Noodles', price: '₹320' },
-      ],
-    },
-    {
-      title: 'Breads',
-      items: [
-        { name: 'Tandoori Roti', price: '₹20' },
-        { name: 'Butter Roti', price: '₹25' },
-        { name: 'Rumali Roti', price: '₹20' },
-        { name: 'Plain Naan', price: '₹45' },
-        { name: 'Butter Naan', price: '₹50' },
-        { name: 'Missi Roti', price: '₹65' },
-        { name: 'Garlic Naan', price: '₹55' },
-        { name: 'Laccha Paratha', price: '₹55' },
-        { name: 'Pudina Paratha', price: '₹55' },
-        { name: 'Mirchi Paratha (Red / Green)', price: '₹55' },
-        { name: 'Paneer Paratha', price: '₹125' },
-        { name: 'Aloo Paratha', price: '₹95' },
-        { name: 'Amritsari Kulcha', price: '₹140' },
-        { name: 'Mutton Keema Naan', price: '₹170' },
-        { name: 'Chicken Keema Naan', price: '₹160' },
-        { name: 'Mutton Keema Naan with Gravy', price: '₹270' },
-        { name: 'Chicken Keema Naan with Gravy', price: '₹260' },
-      ],
-    },
-  ],
+export const formatRupees = (value) => `₹${value.toLocaleString('en-IN')}`;
 
-  extras: [
-    {
-      title: 'Sides & Extras',
-      items: [
-        { name: 'Mix Raita', price: '₹130' },
-        { name: 'Plain Curd', price: '₹120' },
-        { name: 'Pineapple Raita', price: '₹180' },
-        { name: 'Boondi Raita', price: '₹130' },
-        { name: 'Green Salad', price: '₹130' },
-        { name: 'Roasted Papad', price: '₹60' },
-        { name: 'Masala Papad', price: '₹70' },
-        { name: 'Fried Papad', price: '₹80' },
-      ],
-    },
-    {
-      title: 'Drinks',
-      items: [
-        { name: 'Soft Drinks', price: '—' },
-        { name: 'Water Bottle', price: '—' },
-        { name: 'Fresh Lime', price: '₹120' },
-        { name: 'Sweet / Salted Lassi', price: '₹120' },
-      ],
-    },
-    {
-      title: 'Desserts',
-      items: [
-        { name: 'Gulab Jamun', price: '₹150', highlight: true },
-      ],
-    },
-  ],
-};
+/** [{ label: 'Half', value: 290 }, ...] — labels align to the right of `portions`. */
+export function priceList(item) {
+  const { prices = [], portions } = item;
+  if (!portions || prices.length < 2) return prices.map((value) => ({ label: null, value }));
+  const labels = portions.slice(portions.length - prices.length);
+  return prices.map((value, i) => ({ label: labels[i] ?? null, value }));
+}
+
+/** Short price for cards: "₹310" or "from ₹290". */
+export function priceFrom(item) {
+  if (!item.prices?.length) return '';
+  const min = Math.min(...item.prices);
+  return item.prices.length > 1 ? `from ${formatRupees(min)}` : formatRupees(min);
+}
+
+export const dishCount = allItems.length;
