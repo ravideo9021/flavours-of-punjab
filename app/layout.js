@@ -8,6 +8,7 @@ import WhatsAppFloat from '@/components/WhatsAppFloat';
 import AmbientBackground from '@/components/AmbientBackground';
 import { SITE_URL, site } from '@/data/site';
 import { openingHoursSpecification } from '@/lib/hours';
+import { Analytics } from '@vercel/analytics/next';
 
 // Barlow is self-hosted as one small file per weight (see assets/fonts/README.md).
 // Google's split subsets made every "₹" download four extra font files, even
@@ -137,6 +138,7 @@ export default function RootLayout({ children }) {
         <Footer />
         <WhatsAppFloat />
         <MobileActionBar />
+        <Analytics />
       </body>
     </html>
   );
