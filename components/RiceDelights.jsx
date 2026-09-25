@@ -2,11 +2,9 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Picture from './Picture';
 import DietMark from './DietMark';
-import { formatRupees, menu } from '@/data/menu';
+import { formatRupees, menu, shortName } from '@/data/menu';
 
 const rice = menu.find((c) => c.id === 'rice-breads').sections.find((s) => s.title === 'Rice & Biryani').items;
-// "Chicken Biryani with Curry / Raita" reads better as "Chicken Biryani" in a short list.
-const shortName = (name) => name.replace(/ with .*$/, '');
 
 export default function RiceDelights() {
   return (

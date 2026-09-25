@@ -9,8 +9,8 @@ import Link from 'next/link';
 export default function Logo({ className = '', onClick }) {
   return (
     <Link href="/" className={`logo ${className}`} aria-label="Flavours Of Punjab — home" onClick={onClick}>
-      <span className="logo-word">Flavours</span>
-      <span className="logo-of">of</span>
+      <span className="logo-word">Flavours</span>{' '}
+      <span className="logo-of">of</span>{' '}
       <span className="logo-word">Punjab</span>
     </Link>
   );

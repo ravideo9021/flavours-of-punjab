@@ -171,7 +171,8 @@ export default function EmberCanvas({ density = 0.00006 }) {
       pointer.y = p.y;
     };
     const onDown = (e) => {
-      if (reduce || userPaused || e.target.closest?.('.ember-controls')) return;
+      // Sparks on the open background only, not when tapping or swiping a card or button.
+      if (reduce || userPaused || e.target.closest?.('a, button, .order-card, .meal-card')) return;
       const p = local(e);
       burst(p.x, p.y, 42, Math.PI * 1.6);
     };

@@ -312,6 +312,9 @@ export function getItem(slug) {
 
 export const formatRupees = (value) => `₹${value.toLocaleString('en-IN')}`;
 
+/** Name for short lists: "Chef Spl. Dal Makhni" -> "Dal Makhni", "Chicken Biryani with Curry / Raita" -> "Chicken Biryani". */
+export const shortName = (name) => name.replace(/^(Chef )?Spl\.\s*/, '').replace(/ with .*$/, '');
+
 /** [{ label: 'Half', value: 290 }, ...] — labels align to the right of `portions`. */
 export function priceList(item) {
   const { prices = [], portions } = item;

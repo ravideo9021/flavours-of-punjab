@@ -833,32 +833,6 @@ h2 em {
   animation: glowPulse 5s ease-in-out infinite;
 }
 
-/* A ring of text around the plate, like the brass rim of a thali. */
-.hero-ring {
-  position: absolute;
-  inset: -6%;
-  width: 112%;
-  max-width: none;
-  height: 112%;
-  animation: spin 70s linear infinite;
-}
-
-.hero-ring circle {
-  fill: none;
-  stroke: rgba(201, 168, 76, 0.32);
-  stroke-width: 1;
-  stroke-dasharray: 1 7;
-  stroke-linecap: round;
-}
-
-.hero-ring text {
-  fill: rgba(232, 212, 139, 0.6);
-  font-family: var(--font-display);
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 6px;
-}
-
 .hero-plate {
   position: absolute;
   inset: 0;
@@ -1196,6 +1170,8 @@ h2 em {
   animation: bob 6s ease-in-out infinite;
 }
 
+/* Clipped to a circle: the turning square SVG would otherwise poke past the
+   screen edge on phones and let the page wobble sideways. */
 .about-seal {
   position: absolute;
   right: -18px;
@@ -1204,7 +1180,9 @@ h2 em {
   place-items: center;
   width: 150px;
   height: 150px;
-  filter: drop-shadow(0 14px 24px rgba(0, 0, 0, 0.45));
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.45);
 }
 
 .about-seal svg {
@@ -1248,7 +1226,8 @@ h2 em {
    Dish cards (signatures & starters)
    ========================================================================== */
 .signatures {
-  background: var(--charcoal);
+  /* Fades in from the ambient background above instead of a hard edge */
+  background: linear-gradient(180deg, transparent, var(--charcoal) 160px);
 }
 
 .starters {
@@ -1552,30 +1531,6 @@ h2 em {
   animation: glowPulse 5s ease-in-out infinite;
 }
 
-.breads-ring {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  animation-duration: 60s;
-}
-
-.breads-ring circle {
-  fill: none;
-  stroke: rgba(201, 168, 76, 0.32);
-  stroke-width: 1;
-  stroke-dasharray: 1 7;
-  stroke-linecap: round;
-}
-
-.breads-ring text {
-  fill: rgba(232, 212, 139, 0.6);
-  font-family: var(--font-display);
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 6px;
-}
-
 .breads-dish {
   position: relative;
   width: 84%;
@@ -1780,30 +1735,171 @@ h2 em {
   padding: 0 20px;
 }
 
-.order-stats {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px clamp(32px, 6vw, 80px);
-  margin-top: 56px;
+/* ---------- Ready-made meals ---------- */
+.meals {
+  margin-top: clamp(64px, 8vw, 96px);
+}
+
+.meals-head {
+  max-width: 620px;
+  margin: 0 auto clamp(28px, 4vw, 40px);
   text-align: center;
 }
 
-.order-stats strong {
-  display: block;
-  font-family: var(--font-display);
-  font-size: clamp(28px, 3.6vw, 44px);
-  font-weight: 800;
-  line-height: 1.1;
-  text-transform: uppercase;
+.meals-head .eyebrow {
+  margin-bottom: 10px;
+}
+
+.meals-head h3 {
+  font-size: clamp(38px, 4.8vw, 58px);
   color: var(--cream);
 }
 
-.order-stats span {
+.meals-head p:last-child {
+  margin-top: 14px;
+  color: var(--muted);
+}
+
+.meals-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.meal-card {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 24px 24px;
+  border: 1px solid rgba(232, 212, 139, 0.14);
+  border-radius: 24px;
+  background:
+    radial-gradient(120% 55% at 50% 0%, rgba(232, 131, 42, 0.18), transparent 65%),
+    rgba(22, 18, 15, 0.92);
+  transition:
+    transform 0.3s var(--ease-out),
+    border-color 0.3s;
+}
+
+.meal-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(232, 212, 139, 0.32);
+}
+
+/* Three dishes on the table, the middle one in front */
+.meal-photos {
+  position: relative;
+  height: 138px;
+  margin: 0 -6px 14px;
+}
+
+.meal-photos img {
+  position: absolute;
+  bottom: 8px;
+  width: 42%;
+  height: auto;
+  max-height: 88%;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 14px rgba(0, 0, 0, 0.55));
+}
+
+.meal-photos picture:nth-child(1) img {
+  left: 0;
+}
+
+.meal-photos picture:nth-child(2) img {
+  left: 50%;
+  bottom: 0;
+  z-index: 1;
+  width: 54%;
+  max-height: 100%;
+  translate: -50% 0;
+}
+
+.meal-photos picture:nth-child(3) img {
+  right: 0;
+}
+
+.meal-for {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
   font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--saffron);
+}
+
+.meal-card h4 {
+  margin: 8px 0 14px;
+  font-size: 30px;
+  line-height: 1;
+  color: var(--cream);
+}
+
+.meal-lines {
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+  border-top: 1px dashed rgba(232, 212, 139, 0.18);
+}
+
+.meal-lines li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px dashed rgba(232, 212, 139, 0.18);
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.meal-lines b {
+  font-weight: 700;
+  color: var(--gold-light);
+}
+
+.meal-lines small {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted);
+}
+
+.meal-lines li > span:last-child {
+  flex-shrink: 0;
+  color: var(--muted);
+}
+
+.meal-total {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin: auto 0 16px;
+}
+
+.meal-total strong {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--saffron);
+}
+
+.meal-total span {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.meal-cta {
+  width: 100%;
 }
 
 /* ==========================================================================
@@ -2574,7 +2670,8 @@ h2 em {
    Gallery (coverflow)
    ========================================================================== */
 .gallery {
-  background: var(--ink);
+  /* Fades out into the ambient background of the reviews below */
+  background: linear-gradient(0deg, transparent, var(--ink) 160px);
 }
 
 .cf {
@@ -2868,6 +2965,132 @@ h2 em {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--gold);
+}
+
+/* ==========================================================================
+   FAQ
+   ========================================================================== */
+.faq-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: start;
+  gap: clamp(36px, 6vw, 88px);
+}
+
+.faq-head {
+  position: sticky;
+  top: calc(var(--header-h) + 32px);
+}
+
+.faq-head h2 {
+  margin-bottom: 22px;
+}
+
+.faq-head .lead {
+  margin-bottom: 26px;
+  font-size: 17px;
+}
+
+.faq-list details {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-list details:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.faq-list summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 20px 2px;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--cream);
+  transition: color 0.2s;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+/* A plus that turns into a minus */
+.faq-list summary::after {
+  content: '';
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(232, 212, 139, 0.3);
+  border-radius: 50%;
+  background:
+    linear-gradient(var(--gold), var(--gold)) center / 12px 2px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) center / 2px 12px no-repeat;
+  transition:
+    background-size 0.3s var(--ease-out),
+    border-color 0.2s;
+}
+
+.faq-list summary:hover {
+  color: var(--gold-light);
+}
+
+.faq-list summary:hover::after,
+.faq-list details[open] summary::after {
+  border-color: var(--gold);
+}
+
+.faq-list details[open] summary::after {
+  background-size:
+    12px 2px,
+    2px 0;
+}
+
+.faq-answer {
+  padding: 0 52px 22px 2px;
+  color: var(--muted);
+}
+
+.faq-answer p {
+  margin: 0;
+}
+
+.faq-answer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 10px;
+  font-weight: 600;
+  color: var(--gold-light);
+}
+
+.faq-answer a:hover {
+  color: var(--saffron);
+}
+
+/* Smooth open and close where supported */
+@supports (interpolate-size: allow-keywords) {
+  .faq-list {
+    interpolate-size: allow-keywords;
+  }
+
+  .faq-list details::details-content {
+    height: 0;
+    overflow: clip;
+    transition:
+      height 0.35s var(--ease-out),
+      content-visibility 0.35s allow-discrete;
+  }
+
+  .faq-list details[open]::details-content {
+    height: auto;
+  }
 }
 
 /* ==========================================================================
@@ -3609,8 +3832,22 @@ h2 em {
     margin-inline: auto;
   }
 
-  .visit-grid {
+  .visit-grid,
+  .faq-grid {
     grid-template-columns: 1fr;
+  }
+
+  .faq-head {
+    position: static;
+  }
+
+  .faq-list summary {
+    padding-block: 18px;
+    font-size: 19px;
+  }
+
+  .faq-answer {
+    padding-right: 8px;
   }
 
   .footer-grid {
@@ -3665,6 +3902,28 @@ h2 em {
   }
 
   .dish-grid--3 .dish-card {
+    scroll-snap-align: start;
+  }
+
+  .meals-grid {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 46%;
+    gap: 14px;
+    margin-inline: calc(-1 * var(--gutter));
+    padding: 4px var(--gutter) 18px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--gutter);
+    scrollbar-width: none;
+  }
+
+  .meals-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .meal-card {
     scroll-snap-align: start;
   }
 }
@@ -3744,6 +4003,32 @@ h2 em {
     display: none;
   }
 
+  /* Menu page: Swiggy and Zomato share the first row, the phone number and
+     an icon-only print button the second (in one flexible row the order
+     buttons were squeezed until their names were cut off). */
+  .menu-page-actions {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .menu-page-actions .order-btn {
+    grid-column: span 2;
+  }
+
+  .menu-page-actions > .btn {
+    grid-column: span 3;
+    padding-inline: 12px;
+  }
+
+  .menu-page-actions > .print-btn {
+    grid-column: span 1;
+  }
+
+  .print-btn-label {
+    display: none;
+  }
+
   .hero-meta {
     margin-top: 16px;
     gap: 10px 16px;
@@ -3797,6 +4082,14 @@ h2 em {
 
   .dish-grid::-webkit-scrollbar {
     display: none;
+  }
+
+  .meals-grid {
+    grid-auto-columns: 84%;
+  }
+
+  .meal-card {
+    padding: 16px 20px 20px;
   }
 
   .dish-card {

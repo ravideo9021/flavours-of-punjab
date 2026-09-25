@@ -39,6 +39,7 @@ export default function Footer() {
             <li><Link href="/#order">Order online</Link></li>
             <li><Link href="/#events">Events &amp; catering</Link></li>
             <li><Link href="/#reviews">Reviews</Link></li>
+            <li><Link href="/#faq">FAQ</Link></li>
             <li><Link href="/#visit">Find us</Link></li>
           </ul>
         </nav>

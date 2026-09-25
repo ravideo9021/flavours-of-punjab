@@ -7,9 +7,33 @@ outdoor catering.
 Built with **Next.js 16** (App Router, static pages) and **React 19**, plain CSS,
 and pre-optimised AVIF/WebP images.
 
+## What's new in version 2.2
+
+Based on what the best restaurant sites do: make ordering and practical
+answers easy, and keep the page calm.
+
+- **Ready-made meals** in the Order online section: dinner for two, a veg
+  feast for two and a family feast for four, priced from the menu with the
+  cost per person. One tap sends the order on WhatsApp with every dish and the
+  total filled in (direct orders pay no app commission). Edit them in
+  `data/meals.js`.
+- **Questions, answered**: delivery, hours, vegetarian food, what Qtr / Half /
+  Full mean, booking a table, parties and how to find us. Also published as
+  FAQ structured data for Google and AI assistants.
+- Fixed: on phones the menu page's Swiggy and Zomato buttons were squeezed
+  until their names were cut off ("SWIGG", "ZOMAT").
+- Fixed: on phones the page could slide sideways a few pixels, because the
+  turning "FOP" seal poked past the screen edge.
+- Calmer: the text rings around the hero dish and the bread basket are gone.
+  Four turning rings on one page was too many; the About seal and the platters
+  banner keep theirs.
+- Smooth fades where the gold smoke background meets the signature dishes and
+  the gallery, instead of hard edges.
+- Ember sparks only fly when you tap the open background, not when you tap a
+  card or button.
+
 ## What's new in version 2.1
 
-- **Hero**: a slowly turning ring of text around the dish.
 - **About**: the photo sits in a gold frame, with a paneer tikka bowl and a
   turning "FOP" seal. The old ring used to cover the signboard.
 - **Dish cards** have a phulkari stripe under the photo.
@@ -75,6 +99,7 @@ Accessibility 89 → 99. Desktop: Performance 100.
 |---|---|
 | Phone, WhatsApp, address, **opening hours**, Swiggy/Zomato/Instagram links | `data/site.js` |
 | Menu items, prices, veg / non-veg | `data/menu.js` |
+| Ready-made meals (dishes, portions, how many) | `data/meals.js` |
 | Guest reviews shown on the site | `data/reviews.js` (real reviews only) |
 | Photos | `assets/photos/` then `npm run images` |
 

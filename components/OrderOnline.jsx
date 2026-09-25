@@ -1,10 +1,8 @@
 import { ArrowUpRight, Phone } from 'lucide-react';
 import EmberCanvas from './EmberCanvas';
+import Meals from './Meals';
 import { SwiggyIcon, WhatsAppIcon, ZomatoIcon } from './BrandIcons';
 import { site, whatsappLink } from '@/data/site';
-import { dishCount } from '@/data/menu';
-
-const roundedDishes = Math.floor(dishCount / 10) * 10;
 
 export default function OrderOnline() {
   return (
@@ -64,20 +62,7 @@ export default function OrderOnline() {
           </a>
         </div>
 
-        <ul className="order-stats reveal" aria-label="At a glance">
-          <li>
-            <strong>{roundedDishes}+</strong>
-            <span>Dishes</span>
-          </li>
-          <li>
-            <strong>Veg &amp; non-veg</strong>
-            <span>Marked on every dish</span>
-          </li>
-          <li>
-            <strong>7 days</strong>
-            <span>Lunch &amp; dinner</span>
-          </li>
-        </ul>
+        <Meals />
       </div>
     </section>
   );

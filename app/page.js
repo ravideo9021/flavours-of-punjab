@@ -11,6 +11,7 @@ import PlattersBanner from '@/components/PlattersBanner';
 import Events from '@/components/Events';
 import Gallery from '@/components/Gallery';
 import Reviews from '@/components/Reviews';
+import Faq from '@/components/Faq';
 import Visit from '@/components/Visit';
 import StayConnected from '@/components/StayConnected';
 
@@ -36,6 +37,7 @@ export default function Home() {
       <Events />
       <Gallery />
       <Reviews />
+      <Faq />
       <Visit />
       <StayConnected />
     </>
