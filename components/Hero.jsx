@@ -3,8 +3,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
 import Picture from './Picture';
-import OpenStatus from './OpenStatus';
-import { SwiggyIcon, ZomatoIcon } from './BrandIcons';
+import OrderButton from './OrderButton';
 import { site } from '@/data/site';
 import { useReducedMotion } from '@/lib/useMediaQuery';
 
@@ -171,25 +170,10 @@ export default function Hero() {
           </div>
 
           <div className="hero-actions">
-            <a className="order-btn order-btn--swiggy" href={site.order.swiggy} target="_blank" rel="noopener noreferrer">
-              <span className="order-btn-logo">
-                <SwiggyIcon size={18} />
-              </span>
-              <span>
-                <span className="order-btn-prefix">Order on </span>Swiggy
-              </span>
-            </a>
-            <a className="order-btn order-btn--zomato" href={site.order.zomato} target="_blank" rel="noopener noreferrer">
-              <span className="order-btn-logo">
-                <ZomatoIcon size={34} />
-              </span>
-              <span>
-                <span className="order-btn-prefix">Order on </span>Zomato
-              </span>
-            </a>
+            <OrderButton brand="swiggy" />
+            <OrderButton brand="zomato" />
           </div>
           <div className="hero-meta">
-            <OpenStatus />
             <Link href="/menu" className="hero-menu-link">
               See the full menu
             </Link>

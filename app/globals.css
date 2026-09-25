@@ -375,14 +375,16 @@ h2 em {
   border-color: var(--paper-ink);
 }
 
-/* Swiggy / Zomato order buttons */
+/* Swiggy / Zomato order buttons (animated pill, as in the original design) */
 .order-btn {
+  position: relative;
+  isolation: isolate;
   display: inline-flex;
   align-items: center;
-  gap: 12px;
   min-height: 54px;
   padding: 6px 24px 6px 6px;
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  border: 1.5px solid rgba(255, 255, 255, 0.22);
   border-radius: 999px;
   background: rgba(13, 11, 9, 0.55);
   color: #fff;
@@ -392,11 +394,18 @@ h2 em {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   white-space: nowrap;
+  transition: border-color 0.3s ease;
+}
+
+.order-btn-label {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
   transition:
-    background-color 0.25s,
-    border-color 0.25s,
-    color 0.25s,
-    transform 0.25s var(--ease-out);
+    transform 0.4s var(--ease-out),
+    opacity 0.3s ease;
 }
 
 .order-btn-logo {
@@ -417,19 +426,68 @@ h2 em {
   color: var(--zomato);
 }
 
-.order-btn:hover {
-  transform: translateY(-2px);
+/* Brand colour that floods out from the logo */
+.order-btn-dot {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 27px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.55s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.order-btn--swiggy:hover {
+.order-btn--swiggy .order-btn-dot {
   background: var(--swiggy);
-  border-color: var(--swiggy);
+}
+
+.order-btn--zomato .order-btn-dot {
+  background: var(--zomato);
+}
+
+.order-btn-hover {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  opacity: 0;
+  transform: translateX(60px);
+  transition:
+    transform 0.4s var(--ease-out),
+    opacity 0.3s ease;
+}
+
+.order-btn--swiggy .order-btn-hover {
   color: var(--ink);
 }
 
-.order-btn--zomato:hover {
-  background: var(--zomato);
-  border-color: var(--zomato);
+@media (hover: hover) {
+  .order-btn:hover,
+  .order-btn:focus-visible {
+    border-color: transparent;
+  }
+
+  .order-btn:hover .order-btn-dot,
+  .order-btn:focus-visible .order-btn-dot {
+    transform: translate(-50%, -50%) scale(46);
+  }
+
+  .order-btn:hover .order-btn-label,
+  .order-btn:focus-visible .order-btn-label {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+
+  .order-btn:hover .order-btn-hover,
+  .order-btn:focus-visible .order-btn-hover {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .brand-btn {
@@ -704,7 +762,7 @@ h2 em {
   justify-content: center;
   min-height: 100vh;
   min-height: 100svh;
-  padding: calc(var(--header-h) + 24px) 0 150px;
+  padding: calc(var(--header-h) + 24px) 0 110px;
   overflow: hidden;
   isolation: isolate;
   background: var(--ink);
@@ -929,15 +987,6 @@ h2 em {
   margin-top: 24px;
 }
 
-.hero-meta .open-status {
-  min-height: 38px;
-  padding: 0 16px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 999px;
-  background: rgba(13, 11, 9, 0.5);
-  font-size: 15px;
-}
-
 .hero-menu-link {
   font-weight: 600;
   color: var(--cream);
@@ -954,7 +1003,7 @@ h2 em {
 .hero-controls {
   position: absolute;
   left: 50%;
-  bottom: 84px;
+  bottom: 30px;
   z-index: 2;
   display: flex;
   align-items: center;
@@ -1018,82 +1067,6 @@ h2 em {
   width: 24px;
   border-color: var(--saffron);
   background: var(--saffron);
-}
-
-/* ==========================================================================
-   Info bar
-   ========================================================================== */
-.infobar {
-  position: relative;
-  z-index: 3;
-  margin-top: -64px;
-}
-
-.infobar-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
-  width: min(100% - 2 * var(--gutter), 1320px);
-  margin-inline: auto;
-}
-
-.info-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  padding: 20px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: rgba(26, 22, 18, 0.94);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
-  transition:
-    border-color 0.25s,
-    transform 0.25s var(--ease-out);
-}
-
-a.info-card:hover {
-  border-color: rgba(201, 168, 76, 0.55);
-  transform: translateY(-3px);
-}
-
-.info-icon {
-  flex-shrink: 0;
-  box-sizing: content-box;
-  padding: 10px;
-  border-radius: 50%;
-  background: rgba(232, 131, 42, 0.12);
-  color: var(--saffron);
-}
-
-.info-label {
-  font-family: var(--font-display);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.info-value {
-  margin: 2px 0;
-  font-size: 16.5px;
-  font-weight: 600;
-  line-height: 1.35;
-  color: var(--cream);
-}
-
-.info-sub {
-  font-size: 14px;
-  color: var(--muted);
-}
-
-.info-link {
-  color: var(--saffron);
-  font-weight: 600;
-}
-
-.info-link::after {
-  content: ' →';
 }
 
 /* ==========================================================================
@@ -3318,10 +3291,6 @@ a.info-card:hover {
     justify-content: center;
   }
 
-  .infobar-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .about-grid {
     grid-template-columns: 1fr;
   }
@@ -3461,44 +3430,11 @@ a.info-card:hover {
     gap: 10px 16px;
   }
 
-  .hero-meta .open-status {
-    font-size: 14px;
-  }
-
   .hero-controls {
     position: static;
     justify-content: center;
     margin-top: 16px;
     transform: none;
-  }
-
-  .infobar {
-    margin-top: 0;
-    padding-top: 12px;
-  }
-
-  .infobar-grid {
-    gap: 10px;
-  }
-
-  .info-card {
-    flex-direction: column;
-    gap: 8px;
-    padding: 14px;
-  }
-
-  .info-icon {
-    padding: 8px;
-    width: 18px;
-    height: 18px;
-  }
-
-  .info-value {
-    font-size: 15px;
-  }
-
-  .info-sub {
-    font-size: 13px;
   }
 
   .about-points {
@@ -3770,8 +3706,7 @@ a.info-card:hover {
 @media (hover: none) {
   .dish-card:hover,
   .order-card:hover,
-  .platform-card:hover,
-  a.info-card:hover {
+  .platform-card:hover {
     transform: none;
   }
 }

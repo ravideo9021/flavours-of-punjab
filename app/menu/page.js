@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Phone } from 'lucide-react';
 import MenuExplorer from '@/components/MenuExplorer';
 import PrintButton from '@/components/PrintButton';
-import { SwiggyIcon, ZomatoIcon } from '@/components/BrandIcons';
+import OrderButton from '@/components/OrderButton';
 import { menu, dishCount } from '@/data/menu';
 import { SITE_URL, site } from '@/data/site';
 
@@ -55,22 +55,8 @@ export default function MenuPage() {
               subject to change.
             </p>
             <div className="menu-page-actions">
-              <a className="order-btn order-btn--swiggy" href={site.order.swiggy} target="_blank" rel="noopener noreferrer">
-                <span className="order-btn-logo">
-                  <SwiggyIcon size={18} />
-                </span>
-                <span>
-                  <span className="order-btn-prefix">Order on </span>Swiggy
-                </span>
-              </a>
-              <a className="order-btn order-btn--zomato" href={site.order.zomato} target="_blank" rel="noopener noreferrer">
-                <span className="order-btn-logo">
-                  <ZomatoIcon size={34} />
-                </span>
-                <span>
-                  <span className="order-btn-prefix">Order on </span>Zomato
-                </span>
-              </a>
+              <OrderButton brand="swiggy" />
+              <OrderButton brand="zomato" />
               <a className="btn btn-outline" href={site.phone.href}>
                 <Phone size={17} aria-hidden="true" /> {site.phone.display}
               </a>

@@ -1,5 +1,4 @@
 import Hero from '@/components/Hero';
-import InfoBar from '@/components/InfoBar';
 import About from '@/components/About';
 import Signatures from '@/components/Signatures';
 import Ticker from '@/components/Ticker';
@@ -18,7 +17,6 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <InfoBar />
       <About />
       <Signatures />
       <Ticker
