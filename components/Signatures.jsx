@@ -1,6 +1,6 @@
 import DishCard from './DishCard';
 
-const SIZES = '(max-width: 740px) 90vw, (max-width: 1040px) 45vw, 380px';
+const SIZES = '(max-width: 740px) 70vw, (max-width: 900px) 40vw, (max-width: 1040px) 30vw, 380px';
 
 export default function Signatures() {
   return (

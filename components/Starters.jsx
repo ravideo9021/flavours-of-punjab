@@ -1,6 +1,6 @@
 import DishCard from './DishCard';
 
-const SIZES = '(max-width: 1040px) 45vw, 280px';
+const SIZES = '(max-width: 740px) 56vw, (max-width: 1040px) 45vw, 280px';
 
 export default function Starters() {
   return (

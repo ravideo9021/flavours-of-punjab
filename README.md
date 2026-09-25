@@ -7,6 +7,28 @@ outdoor catering.
 Built with **Next.js 16** (App Router, static pages) and **React 19**, plain CSS,
 and pre-optimised AVIF/WebP images.
 
+## What's new in version 2.1
+
+- **Hero**: a slowly turning ring of text around the dish.
+- **About**: the photo sits in a gold frame, with a paneer tikka bowl and a
+  turning "FOP" seal. The old ring used to cover the signboard.
+- **Dish cards** have a phulkari stripe under the photo.
+- **Rice & biryani band** now lists every rice dish and biryani with its price,
+  straight from the menu file.
+- **New section: Breads & kulchas.** Garlic naan fresh from the tandoor, with
+  eight breads and their prices and a link to the full list.
+- **Order online**: you can stir the tandoor embers with the mouse. A click or
+  tap throws sparks, and **Stoke** sends up a shower. It can be paused, and it
+  stays still for "reduce motion".
+- **Event form** fixed: the boxes no longer overlap, and the date field is wide
+  enough to show the whole date, even with large phone text. The drop-downs
+  have a gold arrow.
+- Tablets: the hero stacks and signature dishes become a swipeable row. Phones
+  get smaller dish photos.
+
+The new sections are below the first screen and their photos load lazily, so
+the first screen is as fast as before.
+
 ## What's in version 2
 
 **Speed**

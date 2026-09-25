@@ -93,11 +93,11 @@ function EnquiryForm({ occasion, setOccasion }) {
             <option value="other">Something else</option>
           </select>
         </label>
-        <label className="field">
+        <label className="field field--date">
           <span>Date</span>
           <input type="date" name="date" required onFocus={(e) => (e.currentTarget.min = todayISO())} />
         </label>
-        <label className="field">
+        <label className="field field--guests">
           <span>Guests</span>
           <input type="number" name="guests" min="1" max="2000" inputMode="numeric" placeholder="e.g. 25" required />
         </label>

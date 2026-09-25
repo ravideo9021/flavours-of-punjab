@@ -4,6 +4,7 @@ import Signatures from '@/components/Signatures';
 import Ticker from '@/components/Ticker';
 import Starters from '@/components/Starters';
 import RiceDelights from '@/components/RiceDelights';
+import TandoorBreads from '@/components/TandoorBreads';
 import OrderOnline from '@/components/OrderOnline';
 import MenuSection from '@/components/MenuSection';
 import PlattersBanner from '@/components/PlattersBanner';
@@ -25,6 +26,7 @@ export default function Home() {
       />
       <Starters />
       <RiceDelights />
+      <TandoorBreads />
       <OrderOnline />
       <MenuSection />
       <Ticker

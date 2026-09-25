@@ -131,6 +131,17 @@ export default function Hero() {
       <div className="hero-inner">
         <div className="hero-visual">
           <div className="hero-glow" aria-hidden="true" />
+          <svg className="hero-ring" viewBox="0 0 400 400" aria-hidden="true">
+            <defs>
+              <path id="hero-ring-path" d="M200,200 m-184,0 a184,184 0 1,1 368,0 a184,184 0 1,1 -368,0" />
+            </defs>
+            <circle cx="200" cy="200" r="198" />
+            <text>
+              <textPath href="#hero-ring-path" textLength="1150" lengthAdjust="spacing">
+                FLAVOURS OF PUNJAB • AUTHENTIC PUNJABI KITCHEN • OLD RAJINDER NAGAR • NEW DELHI •
+              </textPath>
+            </text>
+          </svg>
           <div className="hero-steam" aria-hidden="true">
             <span />
             <span />

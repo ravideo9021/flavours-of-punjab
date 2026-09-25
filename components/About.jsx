@@ -58,16 +58,22 @@ export default function About() {
             />
           </div>
           <div className="about-naan" aria-hidden="true">
-            <Picture name="garlic-naan" alt="" sizes="(max-width: 740px) 44vw, 260px" />
+            <Picture name="paneer-tikka-bowl" alt="" sizes="(max-width: 740px) 44vw, 260px" />
           </div>
-          <svg className="about-ring" viewBox="0 0 300 300" aria-hidden="true">
-            <defs>
-              <path id="about-ring-path" d="M150,150 m-118,0 a118,118 0 1,1 236,0 a118,118 0 1,1 -236,0" />
-            </defs>
-            <text>
-              <textPath href="#about-ring-path">AUTHENTIC • PUNJABI • KITCHEN • FLAVOURS OF PUNJAB • NEW DELHI •</textPath>
-            </text>
-          </svg>
+          <div className="about-seal" aria-hidden="true">
+            <svg className="spin-ring" viewBox="0 0 300 300">
+              <defs>
+                <path id="about-ring-path" d="M150,150 m-112,0 a112,112 0 1,1 224,0 a112,112 0 1,1 -224,0" />
+              </defs>
+              <circle cx="150" cy="150" r="146" />
+              <text>
+                <textPath href="#about-ring-path" textLength="700" lengthAdjust="spacing">
+                  AUTHENTIC • PUNJABI • KITCHEN • OLD RAJINDER NAGAR • NEW DELHI •
+                </textPath>
+              </text>
+            </svg>
+            <span className="about-seal-mark">FOP</span>
+          </div>
         </div>
       </div>
     </section>

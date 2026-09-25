@@ -1,6 +1,12 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Picture from './Picture';
+import DietMark from './DietMark';
+import { formatRupees, menu } from '@/data/menu';
+
+const rice = menu.find((c) => c.id === 'rice-breads').sections.find((s) => s.title === 'Rice & Biryani').items;
+// "Chicken Biryani with Curry / Raita" reads better as "Chicken Biryani" in a short list.
+const shortName = (name) => name.replace(/ with .*$/, '');
 
 export default function RiceDelights() {
   return (
@@ -20,7 +26,17 @@ export default function RiceDelights() {
         </h2>
         <p className="rice-sub">
           From fragrant chicken, mutton and veg biryanis to comforting jeera rice — every plate is packed with aroma.
+          Biryanis come with curry or raita.
         </p>
+        <ul className="rice-list">
+          {rice.map((item) => (
+            <li key={item.name}>
+              <DietMark diet={item.diet} size={14} />
+              <span>{shortName(item.name)}</span>
+              <strong>{formatRupees(item.prices[0])}</strong>
+            </li>
+          ))}
+        </ul>
         <Link className="btn btn-white" href="/menu#rice-breads">
           Explore rice &amp; biryani <ArrowRight size={18} aria-hidden="true" />
         </Link>
