@@ -10,7 +10,7 @@ and pre-optimised AVIF/WebP images.
 ## What's new in version 2.2
 
 Based on what the best restaurant sites do: make ordering and practical
-answers easy, and keep the page calm.
+answers easy, and let real guests do the talking.
 
 - **Ready-made meals** in the Order online section: dinner for two, a veg
   feast for two and a family feast for four, priced from the menu with the
@@ -20,13 +20,13 @@ answers easy, and keep the page calm.
 - **Questions, answered**: delivery, hours, vegetarian food, what Qtr / Half /
   Full mean, booking a table, parties and how to find us. Also published as
   FAQ structured data for Google and AI assistants.
+- **Guest reviews**: four real Google reviews, word for word, as cards in the
+  reviews section (a swipeable row on phones). Add or change them in
+  `data/reviews.js`.
 - Fixed: on phones the menu page's Swiggy and Zomato buttons were squeezed
   until their names were cut off ("SWIGG", "ZOMAT").
 - Fixed: on phones the page could slide sideways a few pixels, because the
   turning "FOP" seal poked past the screen edge.
-- Calmer: the text rings around the hero dish and the bread basket are gone.
-  Four turning rings on one page was too many; the About seal and the platters
-  banner keep theirs.
 - Smooth fades where the gold smoke background meets the signature dishes and
   the gallery, instead of hard edges.
 - Ember sparks only fly when you tap the open background, not when you tap a
@@ -34,6 +34,7 @@ answers easy, and keep the page calm.
 
 ## What's new in version 2.1
 
+- **Hero**: a slowly turning ring of text around the dish.
 - **About**: the photo sits in a gold frame, with a paneer tikka bowl and a
   turning "FOP" seal. The old ring used to cover the signboard.
 - **Dish cards** have a phulkari stripe under the photo.

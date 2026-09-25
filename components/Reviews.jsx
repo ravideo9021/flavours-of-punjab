@@ -33,16 +33,24 @@ export default function Reviews() {
           <ul className="review-cards">
             {reviews.map((r) => (
               <li key={`${r.name}-${r.text.slice(0, 16)}`} className="review-card reveal">
-                <Quote className="review-quote" size={28} aria-hidden="true" />
-                {r.rating && <Stars rating={r.rating} />}
+                <div className="review-top">
+                  {r.rating && <Stars rating={r.rating} />}
+                  <Quote className="review-quote" size={28} aria-hidden="true" />
+                </div>
                 <blockquote>
                   <p>{r.text}</p>
                 </blockquote>
                 <p className="review-by">
-                  <strong>{r.name}</strong>
-                  <span>
-                    {r.source}
-                    {r.date ? ` · ${r.date}` : ''}
+                  <span className="review-avatar" aria-hidden="true">
+                    {r.name.charAt(0)}
+                  </span>
+                  <span className="review-who">
+                    <strong>{r.name}</strong>
+                    <span>
+                      {r.source} review
+                      {r.badge ? ` · ${r.badge}` : ''}
+                      {r.date ? ` · ${r.date}` : ''}
+                    </span>
                   </span>
                 </p>
               </li>

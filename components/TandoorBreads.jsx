@@ -21,6 +21,17 @@ export default function TandoorBreads() {
       <div className="container breads-grid">
         <div className="breads-visual reveal">
           <div className="breads-glow" aria-hidden="true" />
+          <svg className="breads-ring spin-ring" viewBox="0 0 400 400" aria-hidden="true">
+            <defs>
+              <path id="breads-ring-path" d="M200,200 m-176,0 a176,176 0 1,1 352,0 a176,176 0 1,1 -352,0" />
+            </defs>
+            <circle cx="200" cy="200" r="196" />
+            <text>
+              <textPath href="#breads-ring-path" textLength="1100" lengthAdjust="spacing">
+                FRESH FROM THE TANDOOR • NAAN • ROTI • PARATHA • AMRITSARI KULCHA •
+              </textPath>
+            </text>
+          </svg>
           <div className="breads-dish">
             <Picture
               name="garlic-naan"
