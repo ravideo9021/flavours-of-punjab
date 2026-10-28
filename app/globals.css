@@ -2870,10 +2870,11 @@ h2 em {
 /* ==========================================================================
    Reviews
    ========================================================================== */
+/* A wall of reviews: cards of any length stack without gaps (columns, not a
+   grid, so a long review doesn't stretch the short ones next to it). */
 .review-cards {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  columns: 3;
+  column-gap: 18px;
   margin: 0 0 26px;
   padding: 0;
   list-style: none;
@@ -2884,10 +2885,12 @@ h2 em {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  margin-bottom: 18px;
   padding: 28px 30px;
   border: 1px solid var(--line);
   border-radius: 22px;
   background: rgba(26, 22, 18, 0.9);
+  break-inside: avoid;
 }
 
 .review-top {
@@ -2911,6 +2914,36 @@ h2 em {
 
 .review-card blockquote p {
   margin: 0;
+}
+
+.review-card blockquote p + p {
+  margin-top: 0.8em;
+}
+
+/* About nine lines, fading out, until "Read more" */
+.review-card blockquote.is-clipped {
+  max-height: calc(1.65em * 9);
+  overflow: hidden;
+  mask-image: linear-gradient(180deg, #000 62%, transparent);
+}
+
+.review-more {
+  align-self: flex-start;
+  margin-top: -6px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  cursor: pointer;
+}
+
+.review-more:hover {
+  color: var(--saffron);
 }
 
 .review-by {
@@ -3916,6 +3949,10 @@ h2 em {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .review-cards {
+    columns: 2;
+  }
+
   .review-platforms {
     grid-template-columns: 1fr;
     max-width: 560px;
@@ -4183,6 +4220,9 @@ h2 em {
   }
 
   .review-cards {
+    display: grid;
+    align-items: start;
+    columns: auto;
     grid-template-columns: none;
     grid-auto-flow: column;
     grid-auto-columns: 86%;
@@ -4201,6 +4241,7 @@ h2 em {
   }
 
   .review-card {
+    margin-bottom: 0;
     padding: 22px;
     scroll-snap-align: start;
   }

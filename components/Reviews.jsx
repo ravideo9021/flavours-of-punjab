@@ -1,5 +1,6 @@
 import { ArrowUpRight, Quote, Star } from 'lucide-react';
 import { GoogleIcon, ZomatoIcon } from './BrandIcons';
+import ReviewText from './ReviewText';
 import { reviews } from '@/data/reviews';
 import { site } from '@/data/site';
 
@@ -37,9 +38,7 @@ export default function Reviews() {
                   {r.rating && <Stars rating={r.rating} />}
                   <Quote className="review-quote" size={28} aria-hidden="true" />
                 </div>
-                <blockquote>
-                  <p>{r.text}</p>
-                </blockquote>
+                <ReviewText text={r.text} />
                 <p className="review-by">
                   <span className="review-avatar" aria-hidden="true">
                     {r.name.charAt(0)}

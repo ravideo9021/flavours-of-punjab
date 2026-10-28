@@ -20,9 +20,9 @@ answers easy, and let real guests do the talking.
 - **Questions, answered**: delivery, hours, vegetarian food, what Qtr / Half /
   Full mean, booking a table, parties and how to find us. Also published as
   FAQ structured data for Google and AI assistants.
-- **Guest reviews**: four real Google reviews, word for word, as cards in the
-  reviews section (a swipeable row on phones). Add or change them in
-  `data/reviews.js`.
+- **Guest reviews**: six real Google reviews, word for word, in a wall of
+  cards (a swipeable row on phones). Long reviews open with "Read more". Add
+  or change them in `data/reviews.js`.
 - Fixed: on phones the menu page's Swiggy and Zomato buttons were squeezed
   until their names were cut off ("SWIGG", "ZOMAT").
 - Fixed: on phones the page could slide sideways a few pixels, because the
